@@ -1,0 +1,91 @@
+<!DOCTyPE html>
+ <head>
+ <script src="js/jquery-2.1.4.min.js"></script>
+ <script>
+ setInterval("changeImage()",2000);//定时函数
+ /*下面的为一个自定意函数*/
+   function changeImage(){
+   
+    
+      $("#top").fadeIn(300);
+  $("#top").animate({
+      top:'80px',
+      opacity:'1.1'
+      
+    });
+  
+  element=document.getElementById('myimage')
+if (element.src.match("lianjietubiaof.png"))
+  {
+  element.src="images/lianjietubiao.png";
+  }
+else
+  {
+  element.src="images/lianjietubiaof.png";
+  }
+  } 
+ 
+</script>
+  <title>
+  kaoheneirong
+  </title>
+   <style type="text/css">
+    body{ background-image:url(images/3.png);      
+       background-size:cover;
+       
+        }
+  #box{
+       margin-left:4%;
+    margin-right:4%;
+   background-image:url(images/border.png);
+   background-size: 100% 580px;
+   width:92%;
+   height:580px;
+  
+     }
+   #top{
+    position:absolute;
+    margin-left:10%;
+    margin-right:10%;
+    width:80%;
+   
+    padding-top:-100px;
+    
+     display:none; 
+   }  
+   #top img{
+    width:70%;
+   }
+    #bottom{
+     position:absolute;
+     bottom:20px;
+     margin-left:10%;
+    margin-right:10%;
+    width:80%;
+   text-align:center;
+    padding-top:260px;
+   }
+    #bottom img{
+     width:60px;
+       
+    }
+    #bottom a{color:transparent;
+    text-decoration:none;
+    }
+   </style>
+ </head>
+ <body>
+  <div id="box">
+   <div id="top">
+    <img src="images/4_4.png" style="float:left; height:100px; width:10%; "  > 
+   <img src="images/3_3.png">
+   <br/>
+    <img src="images/3_2.png">
+   </div>
+     <div id="bottom">
+   <a href="page3.html"> <img src="images/lianjietubiao.png" id="myimage"> </a>
+    </div>
+  </div>
+ </body>
+ 
+</html>

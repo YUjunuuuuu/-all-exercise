@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>各种效果的链接效果</title>
+</head>
+
+<body>
+    <p id="p1">李元东是傻逼</p>
+    <button>奇迹即将发生</button>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            $("button").click(function() {
+                $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+            })
+        })
+    </script>
+</body>
+
+</html>

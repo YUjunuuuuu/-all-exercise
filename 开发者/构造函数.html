@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>构造函数</title>
+</head>
+
+<body>
+	<div id="dv"></div>
+	<!--<script type="text/javascript">
+	function Person(name,age,job){
+		var o=new Object();
+		o.name=name;
+		o.age=age;
+		o.job=job;
+		o.sayName=function(){
+			alert(this.name);
+		};
+	}
+		var friend=new Person("李元东",23,"软件工程师");
+		friend.sayName();
+		
+	</script>-->
+	<!--<script type="text/javascript">
+	function SpecialArray(){
+		var values=new Array();
+		values.push.apply(values,arguments);
+		values.toPipedString=function(){
+			return this.join("|");
+		};
+		return values;
+		
+	}
+		var colors=new SpecialArray("red","blue","green");
+		alert(colors.toPipedString());
+	</script>-->
+	<!--<script type="text/javascript">
+	function SuperType(){
+		this.property=true;
+	}
+		SuperType.prototype.getSuperValue=function(){
+			return this.property;
+		};
+		function SubType(){
+			this.subproperty=false;
+		}
+		SubType.prototype=new SuperType();
+		//SubType.prototype.getSubvalue=function(){
+			//return this.subproperty;
+		//};
+		SubType.prototype.getSuperValue=function(){
+			return false;
+		}
+		var instance=new SubType();
+		alert(instance.getSuperValue());
+		
+	</script>-->
+	<!--<script type="text/javascript">
+	function SuperType(){
+		this.colors=["red","blue","green"];
+	}
+		function SubType(){
+			SuperType.call(this);
+		}
+		var instance1=new SubType();
+		instance1.colors.push("black");
+		alert(instance1.colors);
+		var instance2=new SubType();
+		alert(instance2.colors);
+		
+		
+	</script>-->
+	<!--<script type="text/javascript">
+	var person={
+		name:"Nicholas",
+		friends:["shelby","Court","Van"]
+	};
+		var anthorPerson=Object.create(person);
+		anthorPerson.name="Greg";
+		anthorPerson.friends.push("Rob");
+		var yetAnthorPerson=Object.create(person);
+		yetAnthorPerson.name="Linda";
+		yetAnthorPerson.friends.push("Barbie");
+		alert(person.friends);
+	</script>-->
+	<!--<script type="text/javascript">
+	// 定义一个动物类
+//组合继承
+		function Animal(name){
+			this.name=name;
+			this.color=["black","red","blue"];
+			
+		}
+		Animal.prototype.sayname=function(){
+			alert("this.name");
+		}
+		function Cat(name,age){
+			Animal.call(this,name);
+			this.age=age;
+		}
+		Cat.prototype=new Animal();
+		Cat.prototype.constructor=Cat;
+		Cat.prototype.sayage=function(){
+			alert(this.age);
+		}
+		var intance1=new Cat();
+		
+	</script>-->
+	<!--<script type="text/javascript">
+	function box(){
+		return function(){
+			return 'Lee';
+		}
+	}
+		alert(box);
+		alert(box());
+		alert(box()());
+	}
+	</script>-->
+	<!--<script type="text/javascript">
+	function createFunctions(){
+		var result=new Array();
+		for(var i=0;i<10;i++){
+			result[i]=function(){
+				return i;
+			};
+		}
+		return result;
+	}
+	console.log(createFunctions());
+		
+	
+	</script>-->
+	<!--<script type="text/javascript">
+	function createFunctions(){
+		var result=new Array();
+		for(var i=0;i<10;i++){
+			result[i]=function(num){
+				return function(){
+					return num;
+				};
+			}(i);
+		}
+		return result;
+	}
+		console.log(createFunctions()[0]());
+	</script>-->
+	<!--<script type="text/javascript">
+	var name="The Window";
+		var Object={
+			name:"My  Object",
+			getNameFunc:function(){
+				var that=this;
+				return function(){
+					return that.name;
+				};
+			}
+		};
+		console.log(Object.getNameFunc()());
+	</script>-->
+	<!--<script type="text/javascript">
+	//function outputNUmbers(count){
+		//for (var i=0;i<count;i++){
+			//alert(i);
+		//}
+	//}
+		var name="The window";
+		var object={
+			name:"My object",
+			getName:function(){
+				return this.name;
+			}
+		}
+		console.log(object.getName());
+	</script>-->
+	<!--<script type="text/javascript">
+	function outputNumbers(count){
+		for(var i=0;i<count;i++){
+			alert(i);
+		}
+		var i=9;
+		alert(i);
+	}
+		outputNumbers(5);
+	</script>-->
+	<script type="text/javascript">
+//	function Person(name){
+//		this.getName=function(){
+//			return name;
+//		};
+//		this.setName=function(value){
+//			name=value;
+//		};
+//	}
+//		var person=new Person("Nicholas");
+//		alert(person.getName());
+//		person.setName("Greg");
+//		alert(person.getName());
+//		f1();
+//		var num=20;
+//		function f1(){
+//			console.log(num);
+//			var num=10;
+//		}
+//		var f1;
+//		f1=function(){
+//			var a;
+//			console.log(a);
+//			a=10;
+//		}
+//		f1();
+//		function Person(name,age,sex){
+//			this.name=name;
+//			this.age=age;
+//			this.sex=sex;
+//		}
+//		Person.prototype.eat=function(){
+//			console.log("菠萝菠萝蜜");
+//		}
+////		var per=new Person("小苏",38,"女");
+////		per.eat();
+////		console.dir(per);
+////		console.dir(Person);
+//		var per1=new Person("小白",20,"男");
+//		var per2=new Person("小黑",19,"女");
+//		console.log(per1.eat==per2.eat);
+//		function ChangeStyle(btnId,dvId,color){
+//			this.btnobj=document.getElementById(btnId);
+//			this.dvobj=document.getElementById(dvId);
+//			this.color=color;
+//		}
+//		ChangeStyle.prototype.init=function(){
+//			console.log(this);
+//		};
+//		var cs=new ChangeStyle("btn","dv","yellow");
+//		cs.init();
+//		function  Person(age){
+//			this.age=age;
+//		}
+//		
+//		Person.prototype={
+//			eat:function(){
+//				console.log("吃");
+//			}
+//		};
+//		Person.prototype.sayHi=function(){
+//			console.log("您好");
+//		};
+//		var per=new Person(10);
+//		console.log(per);
+//		console.log(Person);
+//		var divobj=document.getElementById("dv");
+//		console.dir(divobj);
+//	
+		((function (){
+			var name="";
+			Person=function(value){
+				name=value;
+			};
+			Person.prototype.getName=function(){
+				return name;
+			};
+			Person.prototype.setName=function(value){
+				name=value;
+				
+			}
+			
+		})());
+		var person1=new Person("李元东");
+		console.log(person1.getName());
+		person1.setName("罗英健");
+		console.log(person1.getName());
+	</script>
+	
+	
+	
+</body>
+</html>

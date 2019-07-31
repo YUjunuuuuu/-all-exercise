@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX 的快速上手</title>
+</head>
+
+<body>
+    <ul id="list">
+
+    </ul>
+
+    <script>
+        var listElement = document.getElementById('list')
+        var xhr = new XMLHttpRequest();
+        // xhr.open('GET', 'user.php');
+        // xhr.send(null);
+        // xhr.onreadystatechange = function() {
+        //     if (this.readyState !== 4)
+        //         return console.log(this.responseText)
+        // }
+        xhr.open('GET', 'user.php');
+        xhr.send(null);
+        xhr.onreadystatechange = function() {
+            if (this.readyState !== 4)
+                return
+            var data = JSON.parse(this.responseText)
+            for (var i = 0; i < data.length; i++) {
+                var liElement = document.createElement('li');
+                liElement.innerHTML = data[i].name;
+                liElement.id = data[i].id;
+                listElement.appendChild(liElement);
+                liElement.addEventListener('click', function() {
+                    var xhr1 = new XMLHttpRequest();
+                    xhr1.open('GET', 'user.php?id=' + this.id);
+                    xhr1.send();
+                    xhr1.onreadystatechange = function() {
+                        if (this.readyState !== 4) return
+                        var obj = JSON.parse(this.responseText);
+                        alert(obj.age);
+
+
+                    }
+                })
+
+
+
+            }
+        }
+
+        //  for(var i=0;i<listElement.children.length;i++){
+
+        //  }
+
+        //涉及ajax操作的页面不能使用文件协议访问
+        //XMLHttpRequest
+        // var xhr = new XMLHttpRequest();
+        // //->0 
+        // //初始化请求代理对象
+        // //xhr就是类似浏览器的作用
+        // xhr.open('GET', 'user.php')
+        //     //->1
+        //     //open 方法已经调用，建立一个与服务器特定端口的连接
+        //     //设置一个请求头
+        // xhr.send(null) //以urlencoded格式设置请求体
+        // xhr.onreadystatechange = function() {
+        //         if (this.readyState !== 4)
+        //             return
+        //         console.log(this.responseText);
+        //     }
+        // xhr.addEventListener('readystatechange', function() {
+        //         switch (this.readyState) {
+        //             case 2:
+        //                  console.log(this.getAllResponseHeaders())
+        //                 console.log(this.readyState)
+        //                     //->2
+        //                     // 已经接受到了报文的响应头
+        //                     //只能拿到头，但却拿不到体
+        //                 break
+        //             case 3:
+        //             //正在下载响应的响应体
+        //             //->3
+        //             //下载中
+        //             //在这里处理响应体不安全
+        //                 console.log(this.readyState)
+        //                 break
+        //             case 4:
+        //             //->4
+        //             //一切 ok
+        //                 console.log(this.readyState)
+        //                 break
+        //         }
+
+        //     })
+        //这个事件并不是只在响应时触发，是状态改变时触发
+
+        // xhr.onload = function() {
+        //         console.log(this.readyState)
+        //         console.log(this.responseText)
+        //     }
+        //接受响应
+    </script>
+</body>
+
+</html>

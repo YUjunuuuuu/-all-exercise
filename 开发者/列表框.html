@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>列表框</title>
+	<style type="text/css">
+		#container{border-style: solid;width:150px;}
+		ul{list-style-type: none;padding-left: 0px}
+	</style>
+</head>
+
+<body>
+	<h1>显示列表项的内容</h1>
+	<div id="container">
+	<ul>
+		<li value="教材名称:计算机组成原理 /r定价:35元"onClick="displayItem(this)">计算机组成原理</li>
+		<li value="教材名称:数据结构  定价:38元" onClick="displayItem(this)">数据结构</li>
+		<li value="教材名称:计算机网络 定价:43元" onClick="displayItem(this)">计算机网络</li>
+		<li value="教材名称:Java程序设计 定价:40元" onClick="displayItem(this)">Java程序设计</li>
+		<li value="教材名称:算法分析 定价:28元" onClick="displayItem(this)">算法分析</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+	function displayItem(obj){
+		obj.style.backgroundColor="blue";
+		alert(obj.getAttribute("value"));
+		
+	}
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>输入框</title>
+	<link href="bootstrap-3.3.7-dist/css/bootstrap.min的副本.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<form>
+	<input type="text" value=" "  name="sr" style="width:300px;height: 300px; border-color: crimson;border-radius: 10px" onChange="gb()">
+	</form>
+	<buttom type="submit" class="btn btn-primary"  id="jy">提交</buttom>
+	<script type="text/javascript">
+	if(document.getElementsByName("sr").value=="")
+		{
+			document.getElementById("jy").setAttribute("disabled","disabled");
+		}
+		else
+			{
+				document.getElementById("jy").style.backgroundColor="pink";
+			}
+	</script>
+</body>
+</html>

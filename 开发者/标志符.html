@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>标志符</title>
+	<script type="text/javascript">
+window.onload= function  (){
+	var four=document.getElementById('one');
+	var  five=document.getElementById('two');
+	var six=document.getElementById('three');
+five.onclick = function  (){
+var	re=/<[^<>]+>/g;
+	six.value=four.value.replace(re,' ');
+};
+	
+};
+	</script>
+</head>
+
+<body>
+	<textarea rows="20" cols="20" id="one"></textarea>
+	<input type="button" id="two" value="转换"/>
+	<textarea rows="20" cols="20" id="three"></textarea>
+</body>
+</html>

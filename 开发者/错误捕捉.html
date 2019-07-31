@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>错误捕捉</title>
+</head>
+
+<body>
+    <!-- <script type="text/javascript">
+        // var xmldom = document.implementation.createDocument("", "root", null);
+        // alert(xmldom.documentElement.tagName);
+        // var child = xmldom.createElement("child");
+        // xmldom.documentElement.appendChild(child);
+        //     var hasXmlDom = document.implementation.hasFeature("XML", "2.0");
+        //     console.log(hasXmlDom);
+        //
+        var parser = new DOMParser();
+        var xmldom = parser.parseFromString("<root><child></child></root>", "text/xml");
+        alert(xmldom.documentElement.tagName);
+        alert(xmldom.documentElement.firstChild.tagName);
+        var anotherChild = xmldom.createElement("child");
+        xmldom.documentElement.appendChild(anotherChild);
+        var children = xmldom.getElementsByTagName("child");
+        alert(children.length);
+    </script> -->
+    <!-- <p>请输入 5 和 10 之间的一个数:</p>
+
+    <input id="demo" type="text">
+    <button type="button" onclick="myFunction()">检测输入</button>
+    <p id="message"></p> -->
+
+    <script type="text/javascript">
+        // function myFunction() {
+        //     var message, x;
+        //     message = document.getElementById("message");
+        //     message.innerHTML = "";
+        //     x = document.getElementById("demo").value;
+        //     try {
+        //         if (x == "") throw "为空";
+        //         if (isNaN(x)) throw "不是一个数字";
+        //         if (x > 10) throw "太大了";
+        //         if (x < 5) throw "太小了";
+        //     } catch (err) {
+        //         message.innerHTML = "输入的值 " + err;
+        //     }
+        // }
+        // var parser = new DOMParser(),
+        //     xmldom, errors;
+        // try {
+        //     xmldom = parser.parseFromString("<root>", "text/xml");
+        //     errors = xmldom.getElementsByTagName("parsererror");
+        //     if (errors.length > 0) {
+        //         throw new Error("Parsing error!");
+        //     }
+        // } catch (ex) {
+        //     alert("Parsing error!");
+        // }
+        var xhr = new XMLHttpRequest();
+        xhr.open("get", "tt.json", true);
+        xhr.send();
+        // 
+        // var obj = {
+        //         name: "sonia",
+        //         age: 22
+        //     }
+        //     //json
+        // var aa = {
+        //     "name": "sonia",
+        //     "age": 22,
+        //     "hobby": ["sing", "dance"],
+        //     "work": {
+        //         "job": "web开发",
+        //         "address": "wuhan",
+
+        //     },
+        //     "member": [{
+        //         "name": "lili",
+        //         "hobby": ["sing", "dance"]
+        //     }, {
+        //         "name": "lili",
+        //         "hobby": ["sing", "dance"]
+        //     }]
+        // }
+        // var test = JSON.stringify(aa, ['name', 'member', 'work']);
+        // console.log(test);
+        // js原生
+        // var xmlhttp;
+        // if(window.XMLHttpRequest){
+        //     xmlhttp=new XMLHttpRequest();
+        // }else{
+        //     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        // };
+        // xmlhttp.open("get",url,true);//true为异步，false为同步
+        // xmlhttp.send();
+        //jquery
+        // $.ajax({
+        //     type:"get",
+        //     url:url,
+        //     async:false,//async 异步  sync 同步
+        //     data:{},
+        //     dataType:"json",
+        //     success:function(msg){
+
+        //     },
+        //     error:function(){
+
+        //     }
+        // })
+    </script>
+</body>
+
+</html>

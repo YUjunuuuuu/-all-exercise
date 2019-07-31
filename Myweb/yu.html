@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>实验web服务器</title>
+</head>
+
+<body>
+    <button class="btn">click</button>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(".btn").on('click', function() {
+            $.ajax({
+                type: "get",
+                url: "127.0.0.1:8888",
+                async: true,
+                data: {},
+                dataType: "json",
+                success: function(msg) {
+                    var obj = msg;
+                    console.log(JSON.stringify(msg));
+                },
+                error: function() {
+
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

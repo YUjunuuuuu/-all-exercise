@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1-339全体成员列表名单(后端获取)</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("button").click(function() {
+                $.ajax({
+                    "url": "text.php",
+                    "type": "post",
+                    "dataType": "json",
+                    "success": function(ele) {
+                        for (i = 0; i < ele.length; i++) {
+                            var s = ele[i];
+                            $("#one").append('<tr><td>' + s.name + '</td><td>' + s.age + '</td><td>' + s.characteristic + '</td></tr>');
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <table id="one">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>特点</th>
+        </tr>
+    </table>
+    <button>出现大名单</button>
+</body>
+
+</html>

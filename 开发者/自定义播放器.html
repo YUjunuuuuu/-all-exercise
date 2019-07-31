@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>自定义媒体播放器</title>
+</head>
+
+<body>
+    <div class="mediaplayer">
+        <div class="video">
+            <video id="player" src="GOPR0402.mp4" width="300" height="200" controls="controls">Video player not available</video>
+        </div>
+        <div class="controls">
+            <input type="button" value="Play" id="video-btn">
+            <span id="curtime">0</span>/<span id="duration">0</span>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var player = document.getElementById("player"),
+            btn = document.getElementById("video-btn"),
+            curtime = document.getElementById("curtime");
+        duration = document.getElementById("duration");
+        duration.innerHTML = player.duration;
+        EventUtil.addHandler(btn, "click", function(event) {
+            if (player.paused) {
+                player.play();
+                btn.value = "Pause";
+            } else {
+                player.pause();
+                btn.value = "play";
+            }
+        });
+        setInterval(function() {
+            curtime.innerHTML = player.currentTime;
+        }, 250);
+    </script>
+</body>
+
+</html>

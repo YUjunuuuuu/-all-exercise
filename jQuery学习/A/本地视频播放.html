@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>本地视频播放</title>
+    <link href="../bootstrap的副本.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        .two {
+            border-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+    <div class="container">
+        <video width="600" height="400" controls="controls" class="two"></video>
+        <input type="file" id="file_input" accept="video/*" webkitdirectory directory />
+        <ul id="one"></ul>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        $(function() {
+
+            $("input").change(function(e) { 
+                //var file = this.files;
+                var y = 0;
+
+
+
+
+
+                var h = new Array();
+                for (var i = 0; i < e.currentTarget.files.length; i++, y++) {
+                    var file = e.currentTarget.files[i];
+                    var name = file.name;
+
+                    if (/.+\.mp4/.test(name)) {
+                        //console.log(name);onClick='checkMaterial(\""+ stringParam  +"\")'
+                        h[y] = window.URL.createObjectURL(file);
+                        $("#one").append('<li id="' + y + '" >' + name + '</li>');
+                        $("#" + y).bind("click", {
+                            index: h[y]
+                        }, clickHandler);
+                    }
+
+
+                    // debugger
+                    //console.log(file[i]);
+                    //console.log(window.URL.createObjectURL(file[i]));
+
+                    //console.log(name);
+
+                }
+
+                function clickHandler(event) {
+                    var i = event.data.index;
+                    $("video").attr("src", i);
+                }
+              $("#container").bind("contextmenu",function(){
+                   $("#container").append('<div id="menu"><div class="one">播放速度</div><div class="one">1x</div><div class="one"></div></div>');
+                   
+                    
+                  
+              })
+
+
+
+            })
+
+
+        })
+    </script>
+
+
+
+</body>
+
+</html>

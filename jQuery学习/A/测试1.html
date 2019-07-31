@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="one1"></div>
+
+    <a href="#" class="one2">部门概况</a>
+    <dd><a href="" class="one3">组织结构</a></dd>
+    <dd><a href="" class="one4">联系方式</a></dd>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            $(".one2").click(function() {
+                $("#one1").append('<a href="#">' + $(".one2").text() + '</a>');
+            })
+            $(".one3").click(function() {
+                $("#one1").append('<a href="#">' + $(".one3").text() + '</a>');
+            })
+            $(".one4").click(function() {
+                $("#one1").append('<a href="#">' + $(".one4").text() + '</a>');
+            })
+        })
+    </script>
+</body>
+
+</html>

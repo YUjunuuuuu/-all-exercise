@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>同步异步问题</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // var xhr = new XMLHttpRequest();
+        // xhr.open('GET', 'time.php', true);
+        // xhr.send(null);
+        // xhr.onreadystatechange = function() {
+        //     if (xhr.readyState !== 4)
+        //         return
+        //     var h = xhr.responseText;
+        //     alert(h);
+
+        // }
+        // console.time('abc');
+        // for(var i=0;i<10000000;i++){
+
+        // }
+        // console.timeEnd('abc');
+        console.time('async');
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'time.php', true);
+        xhr.send(null);
+        console.timeEnd('async');
+        console.time('sync');
+        var xhrSync = new XMLHttpRequest();
+        xhrSync.open('GET', 'time.php', false);
+        xhrSync.send();
+        console.timeEnd('sync');
+    </script>
+</body>
+
+</html>

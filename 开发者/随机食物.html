@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>随机食物</title>
+	<style type="text/css">
+		#map{
+			width:800px;
+			height:800px;
+			background-color: darkgray;
+			position:relative;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="map"></div>
+	<script type="text/javascript">
+		
+			((function () {
+        function Random() {}
+        
+        //在原型中添加方法
+        Random.prototype.getRandom = function (min,max) {
+            return parseInt((Math.random() * (max - min) + min))
+        }
+        window.Random = Random;
+    })());
+    
+	//实例化对象
+    var rm = new  Random();
+
+//产生小方块的对象
+    ((function () {
+        function Food(width,height,color,x,y) {
+            this.width = width || 20;
+            this.height = height || 20;
+            this.color = color || "green";
+            //随机产生的
+            this.x = x || 0;
+            this.y = y || 0;
+
+            //创建一个div盒子
+            this.element = document.createElement("div");
+        }
+        //设置小方块显示的效果和位置
+        Food.prototype.init = function (map) {
+            //1.储存div元素的对象
+            var div = this.element;
+            //2.设置小方块的样式
+            div.style.width = this.width + "px";
+            div.style.height = this.height + "px";
+            div.style.backgroundColor = this.color;
+            div.style.position = "absolute";
+            //3.把小方块添加到map中
+            map.appendChild(div);
+
+            //随机的位置
+            this.render(map);
+        }
+
+        //产生随机的位置
+        Food.prototype.render = function (map) {
+            //随机数的区间 0 - 39
+            //随机的坐标
+            this.x = rm.getRandom(0,map.offsetWidth / this.width) * this.width;
+            this.y = rm.getRandom(0,map.offsetHeight / this.height) * this.height;
+            console.log(this.y);
+            console.log(rm.getRandom(0,map.offsetHeight / this.height) * this.height);
+            this.element.style.left = this.x + "px";
+            this.element.style.top = this.y + "px";
+        }
+
+        //实例化对象
+        var food = new Food(20,20,"green");
+        food.init(document.getElementById("map"));
+    })());
+
+
+	
+		
+		
+	</script>
+	
+</body>
+</html>

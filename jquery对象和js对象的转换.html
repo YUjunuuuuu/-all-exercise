@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jquery对象和js对象的转换</title>
+</head>
+
+<body>
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <input type="button" value="点我" id="b1">
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    //给按钮添加事件
+    //获取b1事件
+    $(function() {
+            $("#b1").click(function() {
+                alert("李元东是傻逼么");
+            })
+        }) //入口函数(dom文档加载完之后执行该函数中的代码)
+</script>
+
+</html>

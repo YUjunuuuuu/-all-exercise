@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*
+			{
+				text-align:center;
+				margin:0px;
+			}
+			.z
+			{
+				width:100px;
+				height:100px;
+				background-color:white;
+
+			}
+		</style>
+	</head>
+	<body onload="g(this)">
+		<!--事件1：onclick-->
+		<button onclick="a()">A按钮</button>
+		<script>
+			function a()
+			{
+				alert("My name is A");
+			}
+		</script>
+		<!--事件2：onmouseout onmouseover-->
+		<div class="z" onmouseout="c(this)" onmouseover="b(this)">
+			<script>
+				function b(bc)
+				{
+					bc.innerHTML = "my name is B";
+					
+				}
+				function c(bc)
+				{
+					bc.innerHTML = "my name is C";
+				}
+			</script>
+		</div>
+		<!--事件3：onchange-->
+		<form>
+			<input type="text" onchange="d(this)">
+			
+		</form>
+		<script>
+			function d()
+			{
+				alert("my name is D");
+			}
+		</script>
+		<!--事件4：onselect onfocus [body:onload] onblur-->
+		<form>
+			<input type="text" onselect="e(this)" onfocus="f(this)" onblur="h(this)">
+		</form>
+		<script>
+			function e(bg)
+			{
+				bg.style.background = "yellow";
+			}
+			function f(bg)
+			{
+				bg.style.background = "pink";
+			}
+			function g()whiete
+			{
+				alert("my name is G")
+			}
+			function h(bg)
+			{
+				bg.style.background = "red";
+			}
+		</script>
+		
+		
+	</body>
+</html>

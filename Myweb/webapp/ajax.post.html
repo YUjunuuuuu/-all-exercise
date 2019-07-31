@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ajax关于post请求</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>用户名</td>
+            <td><input type="text" id="username"></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input type="password" id="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="btn">登陆</button></td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        var btn = document.getElementById('btn');
+        var txtUsername = document.getElementById('username');
+        var txtPassword = document.getElementById('password');
+        btn.onclick = function() {
+            //1.获取界面上的元素的value
+            var username = txtUsername.value;
+            var password = txtPassword.value;
+
+            //2.通过XHR发送一个post请求
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'login.php');
+            //!!!一定注意，如果请求题是urlencoded格式 必须设置请求头
+           xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send('username=' + username + '&password=' + password);
+            //3.根据服务端的反馈 作出界面提示
+            xhr.onreadystatechange = function() {
+                if (this.readyState !== 4)
+                    return
+                console.log(this.responseText);
+            }
+        }
+    </script>
+</body>
+
+</html>

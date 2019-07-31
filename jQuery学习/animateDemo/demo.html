@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        body {
+            margin: 50px 0 0 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .tp {
+            width: 15%;
+        }
+        
+        .demo img {
+            width: 200px;
+            /* height: 15%; */
+        }
+        /* .demo :hover{
+            animation-name:slideInDown;
+        }
+        .h111 :hover{
+            animation-name: slideInDown;
+        }   */
+        
+        .fh2 {
+            font-size: 3em;
+            top: 180px;
+            position: relative;
+            opacity: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="demo">
+        <img class="" id="tp1" src="头像.jpg" onmouseover="fun1()" onmouseout="fun2()">
+        <h2 class="fh2" id="opaa">Hello</h2>
+    </div>
+    <script type="text/javascript">
+        var tp = document.getElementById("tp1");
+        var h = 200;
+        var op = document.getElementById("opaa");
+
+        function fun1() {
+            // alert("test");
+
+            // setTimeout(function(){
+            //     tp1.className = '';
+            // },2000);
+            // tp1.style.width = 1000 + "px";
+            function widp() {
+                tp.className = 'animated slideOutDown';
+                h = h + 5;
+                tp.style.width = h + "px";
+                if (h == 400) {
+                    clearInterval(aaa);
+                }
+            }
+            aaa = setInterval(widp, 10);
+            // opaa.style.opacity = 1;
+            var opa = 0;
+
+            function op1() {
+
+                opa = opa + 0.1;
+                op.style.opacity = opa;
+                if (opa == 1) {
+                    clearInterval(ccc);
+
+                }
+
+
+
+            }
+            ccc = setInterval(op1, 1000);
+
+
+
+
+
+            // ccc = setInterval(op1, 10);
+
+        }
+
+        function fun2() {
+            h = 400;
+
+            function widr() {
+                // tp1.className = 'animated alideOutUp'
+                h = h - 5;
+                tp1.style.width = h + "px";
+                if (h == 200) {
+                    clearInterval(bbb);
+
+                }
+
+            }
+
+            bbb = setInterval(widr, 10);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+	<script type="text/javascript">
+	function createP()
+		{
+	var newp=document.createElement("p");
+	var ptext=document.createTextNode("Hello World!");
+	newp.appendChild(ptext);
+	document.forms[0].appendChild(newp);
+		}</script>
+</head>
+
+<body>
+	<form name="form1">
+	<input type="button" value="点击创建节点" onClick="createP()"
+	</form>
+</body>
+</html>

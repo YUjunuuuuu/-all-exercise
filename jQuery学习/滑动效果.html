@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>滑动效果</title>
+    <style type="text/css">
+        .two {
+            width: 300px;
+            height: 20px;
+            background-color: aqua;
+            text-align: center
+        }
+        
+        .one {
+            width: 300px;
+            height: 20px;
+            background-color: bisque;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button>停止下滑/上滑</button>
+    <div class="two">1</div>
+    <div class="one">2</div>
+    <div class="one">3</div>
+    <div class="one">4</div>
+    <div class="one">5</div>
+</body>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script>
+    $(function() {
+        $(".two").click(function() {
+            $(".one").slideToggle("slow")
+        })
+        $("button").click(function() {
+            $(".one").stop();
+        })
+
+    })
+</script>
+
+</html>

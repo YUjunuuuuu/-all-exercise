@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>滑冰</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+        }
+        
+        .one {
+            list-style-type: none;
+            padding: 0px;
+            position: absolute;
+            margin-left: -150px;
+            width: 1200px;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        .three {
+            width: 900px;
+            height: 94px;
+            margin-left: 150px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .left {
+            position: absolute;
+            margin-top: -55px;
+            margin-left: 75px
+        }
+        
+        .right {
+            position: absolute;
+            margin-top: -55px;
+            margin-left: 1080px;
+        }
+        
+        .four {
+            width: 800px;
+            height: 500px;
+            border-style: solid;
+            margin-left: 195px;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="three">
+        <ul class="one">
+            <li onclick="h1()"><img src="/Users/macyj/Desktop/www.jpg"></li>
+            <li onclick="h2()"><img src="/Users/macyj/Desktop/323077094b36acaff52e02ac7dd98d1003e99cf0.jpg"></li>
+            <li onclick="h1()"><img src="/Users/macyj/Desktop/www.jpg"></li>
+            <li onclick="h2()"><img src="/Users/macyj/Desktop/323077094b36acaff52e02ac7dd98d1003e99cf0.jpg"></li>
+            <li onclick="h1()"><img src="/Users/macyj/Desktop/www.jpg"></li>
+            <li onclick="h2()"><img src="/Users/macyj/Desktop/323077094b36acaff52e02ac7dd98d1003e99cf0.jpg"></li>
+            <li onclick="h1()"><img src="/Users/macyj/Desktop/www.jpg"></li>
+            <li onclick="h2()"><img src="/Users/macyj/Desktop/323077094b36acaff52e02ac7dd98d1003e99cf0.jpg"></li>
+        </ul>
+    </div>
+    <button class="left" onmouseover="left()"><<</button>
+    <button class="right" onmouseover="right()">>></button>
+    <div class="four"></div>
+    <script type="text/javascript">
+        var h = document.getElementsByClassName("one")[0];
+        var l = 0;
+
+        function left() {
+            var intervalId = null;
+
+            function one() {
+                l = l + 10;
+                h.style.left = l + "px";
+                if (l == 150) {
+                    clearInterval(intervalId);
+                }
+            }
+            intervalId = setInterval(one, 50);
+        }
+
+        function right() {
+            var intervalId = null;
+
+            function one() {
+                l = l - 10;
+                h.style.left = l + "px";
+                if (l == -150) {
+                    clearInterval(intervalId);
+                }
+            }
+            intervalId = setInterval(one, 50);
+        }
+        var x = document.getElementsByClassName("four")[0];
+
+        function h1() {
+            x.style.backgroundImage = 'url(/Users/macyj/Desktop/www.jpg)';
+        }
+
+        function h2() {
+            x.style.backgroundImage = 'url(/Users/macyj/Desktop/323077094b36acaff52e02ac7dd98d1003e99cf0.jpg)';
+        }
+    </script>
+</body>
+
+</html>

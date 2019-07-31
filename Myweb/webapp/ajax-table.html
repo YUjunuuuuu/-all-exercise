@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>动态渲染数据到表格</title>
+</head>
+
+<body>
+    <table id="demo">
+
+
+    </table>
+    <script id="tmpl" type="text/x-art-template">
+        {{each comments}}
+        <!-- each 内部 $value 拿到的是当前被遍历的那个元素() -->
+        <tr>
+            <td>{{$value.id}}</td>
+            <td>{{$value.author.name}}</td>
+            <td>{{$value.content}}</td>
+        </tr>
+        {{/each}}
+    </script>
+    <script type="text/javascript" src="template-web.js"></script>
+    <script type="text/javascript">
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'text.php');
+        xhr.send();
+        xhr.onreadystatechange = function() {
+                if (this.readyState !== 4) return
+                var res = JSON.parse(this.responseText);
+                //data为服务器端返回的数据
+                var context = {
+                    comments: res.data
+                };
+                //模版所需数据
+                var html = template('tmpl', context);
+                console.log(html);
+                document.getElementById("demo").innerHTML = html;
+            }
+            //如何用模版
+            //1，选择一个模版引擎
+            //2，下载模版引擎js文件
+            //3，引入到页面中
+            //4，准备一个模版
+            //5，准备一个数据
+            //6。通过模版引擎的js提供的一个函数将模版和数据整合得到渲染结果html
+            //7,将渲染湖恶果的html设置到默认元素的innerhtml中
+    </script>
+
+</body>
+
+</html>

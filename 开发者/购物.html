@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>购物</title>
+	<style type="text/css">
+		#container{width:800px;height:600px;border-style: solid;}
+		#first{width:100%;height:25%;border-bottom-style: dashed;}
+		#second{width:100%;height:25%;border-bottom-style: dashed;padding-left: 200px}
+		#third{width:100%;height:25%;border-bottom-style: dashed;}
+		ul{list-style-type: none;padding-left: 0px}
+		ul li{display:inline;margin-left:72px;}
+		#two{float:right;}
+		#three{padding-top: 61px;}
+		#four{width:110px;float:left;}
+		#five{width:50px;float:left;margin-left: 35px}
+		#six{width:100px;height:20px;border-style: solid;float:left;margin-left: 25px;margin-top: 18px}
+		#seven{width:20px;height:100%;border-right-style: solid;background-color: darkgrey;padding-left: 5px;float:left;}
+		#eight{float:left}
+		#nine{width:22px;height:20px;background-color: darkgray;float:left;padding-left: 4px};
+	</style>
+</head>
+
+<body>
+	<div id="container">
+	<div id="first">
+		<div id="one"><h2>当当网购物车</h2></div>
+			<div id="two"><button value="">关闭</button></div>
+		<div id="three"><ul>
+		<li>商品图片</li>
+		<li>商品信息</li>
+		<li>单价</li>
+		<li>数量</li>
+		<li>总价</li>
+			<li>操作</li></ul></div>
+		</div>
+	<div id="second">
+		<div id="four"><p>我和狗狗活下来了</p></div>
+		<div id="five"><p>￥21.9</p></div>
+		<div id="six"><div id="seven" onClick="jg1()"><a href="#" >-</a></div>
+		<div id="eight">
+			<form>
+			<input type="text"  id="th" value="0"  style="width: 40px; text-align: center"></form></div>
+			<div id="nine" onClick="jg2()"><a href="#">+</a></div></div>
+	    <div id="ten" style="height:100px;float:left;margin-left: 30px"><p id="zj"></p></div>
+		<div id="ten1" style="height:100px;float:left;margin-left: 50px"><p><a href="#">移入收藏</a><br/><a href="#">删除</a></p></div>
+		</div>
+	<div id="third"></div>
+		<div id="fourth" style="padding-top: 0px"><div id="eleven" style="text-align: center;width: 80%;float:left">商品总计:<span>￥113</span></div>
+		<div id="twelve" style="width: 20%;float:left;padding-left: "><button value="">结算</button></div>
+		<div id="fourteen"><p>您本次购买的商品信息如下:</p><p>白岩松：白说：</p><p>商品总计:</p></div></div>
+		<script type="text/javascript">
+		function jg1()
+			{
+				var h=parseInt(document.getElementById("th").value)-1;
+				if(h<=0)
+					alert("不能再减了，再减就没了");
+				else
+				{document.getElementById("th").value=h;
+					var j=document.getElementById("zj");
+				j.innerHTML="￥"+h*21.9;
+				}
+			}
+				function jg2()
+			{
+				var h=parseInt(document.getElementById("th").value)+1;
+				document.getElementById("th").value=h;
+				var j=document.getElementById("zj");
+				j.innerHTML="￥"+h*21.9;
+				
+			}
+		</script>
+</body>
+</html>

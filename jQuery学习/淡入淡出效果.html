@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>淡入淡出的效果</title>
+    <style type="text/css">
+        #div1 {
+            width: 80px;
+            height: 80px;
+            background-color: brown;
+        }
+        
+        #div2 {
+            width: 80px;
+            height: 80px;
+            background-color: aqua;
+        }
+        
+        #div3 {
+            width: 80px;
+            height: 80px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击淡入/淡出</button>
+    <br><br>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            $("button").click(function() {
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("div3").fadeToggle(3000);
+            })
+        })
+    </script>
+
+</body>
+
+</html>

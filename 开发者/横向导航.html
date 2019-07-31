@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>横向导航</title>
+	<style type="text/css">
+		*{
+			margin:0px;padding:0px;
+		}
+		#haha{
+			padding-left:200px;
+			margin:0 auto;
+			text-align:centre;
+			width:100%;
+			height:60px;
+			background:#4A4A4A;
+		}
+		#haha ul{
+			margin:0px;
+			padding:0px;
+		}
+		.tiger{
+			width:900px;
+			height:28px;
+			text-align:center;
+		}
+		#haha ul li{
+			height:30px;
+			width:115px;
+			list-style:none;
+			float:left;
+			display:inline;
+			text-align:center;
+		}
+		ul li a{
+			color:#FFF;
+			width:114px;
+			margin:0px;
+			padding:0px 0px 0px 8px;
+			text-decoration: none;
+			display:block;
+			background:#55A0FF;
+			line-height:29px;
+			border-bottom:1px solid #ccc;
+		}
+		ul li .tiger ul li{
+			height:25px;
+		}
+		ul li .tiger ul li a{
+			background:#55AAEE;
+			line-height:24px;
+		}
+		ul li a:hover{
+			background:#666;
+			border-bottom:1px dashed #FF0000;
+		}
+		ul li .tiger{
+			display:none;
+		}
+		
+		ul li:hover .tiger {
+			display:block
+		
+		}
+	
+	</style>
+</head>
+
+<body>
+	<div id="haha">
+	<ul>
+	<li><a href="#">赵子豪</a>
+		<div class="tiger"><ul>
+			<li><a href="#">肾虚</a></li>
+			<li><a href="#">性格慢</a></li>
+			<li><a href="#">整天无精打采</a></li></ul></div></li>
+		<li><a href="#">李元东</a>
+			<div class="tiger">
+		<ul>
+			<li><a href="#">大叔</a></li>
+			<li><a href="#">丑</a></li>
+			<li><a href="#">脑子不好使</a></li></ul></div></li>
+		<li><a href="#">罗英健</a>
+			<div class="tiger">
+		<ul>
+			<li><a href="#">gay</a></li>
+			<li><a href="#">胖</a></li>
+			<li><a href="#">脑壳空洞</a></li></ul></div></li>
+		<li><a href="#">俞军</a>
+		<div class="tiger"><ul>
+			<li><a href="#">帅气</a></li>
+			<li><a href="#">单身贵族</a></li>
+			<li><a href="#">未来的比尔</a></li></ul></div></li>
+		<li><a href="#">谷轶铭</a>
+		<div class="tiger"><ul>
+			<li><a href="#">女装大佬</a></li></ul></div></li>
+	</ul>
+		</div>
+</body>
+</html>

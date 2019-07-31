@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style type="text/css">
+        .one {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: darkblue;
+            animation: donghua1 2s;
+        }
+        
+        @keyframes donghua1 {
+            /* from {
+                background-color: darkblue;
+                top: 0;
+                left: 0;
+            }
+            to {
+                background-color: aquamarine;
+                top: 150px;
+                left: 200px;
+            } */
+            0% {
+                background-color: black;
+                top: 0;
+                left: 0;
+            }
+            10% {
+                background-color: blueviolet;
+                top: 100px;
+                left: 100px;
+            }
+            20% {
+                background-color: brown;
+                top: 300px;
+                left: 300px;
+            }
+            30% {
+                background-color: cornflowerblue;
+                top: 300px;
+                left: 200px;
+            }
+            40% {
+                background-color: blueviolet;
+                top: 300px;
+                left: 300px
+            }
+            50% {
+                background-color: cadetblue;
+                top: 300px;
+                left: 200px;
+            }
+            60% {
+                background-color: bisque;
+                top: 300px;
+                left: 300px;
+            }
+            70% {
+                background-color: teal;
+                top: 300px;
+                left: 200px;
+            }
+            80% {
+                background-color: aquamarine;
+                top: 300px;
+                left: 300px;
+            }
+            100% {
+                background-color: antiquewhite;
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>制作二级导航菜单(纵向)</title>
+    <style type="text/css">
+        #menu{
+            width: 100px;
+            border: 1px solid #999;
+        }
+        #menu ul{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;/* 隐藏默认列表符号*/
+        }
+        #menu ul li{
+            background: #06C;
+            height: 26px;
+            line-height: 26px;  /*行距*/
+            text-align: center;
+            border-bottom: 1px solid #999;
+            position: relative;
+        }
+        a{
+            display: block;
+            font-size: 13px;
+            color: #FFF;
+            text-decoration: none;/*隐藏超廉价默认下划线*/
+        }
+        a:hover{
+            color:#F00;
+            font-size: 14px;
+        }
+        #menu ul li ul{
+            display: none;/*默认隐藏*/
+            top:0px;
+            width: 130px;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            position: absolute;
+            left: 100px;
+        }
+        #menu ul li:hover ul{
+            display: block;
+        }
+        #menu ul li:hover ul li a{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li><a href="#">前端</a>
+        <ul>
+            <li><a href="#">HTML5</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">Ajax</a></li>
+            <li><a href="#">jQuery</a></li>
+        </ul>
+    </li>
+    <li><a href="#">后台</a>
+        <ul>
+            <li><a href="#">Java</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">C#</a></li>
+        </ul>
+    </li>
+        <li><a href="#">移动应用</a>
+            <ul>
+                <li><a href="#">Android</a></li>
+                <li><a href="#">IOS</a></li>
+            </ul>
+        </li>
+    <li><a href="#">数据库</a>
+        <ul>
+            <li><a href="#">Oracle</a></li>
+            <li><a href="#">MySql</a></li>
+            <li><a href="#">SqlServer</a></li>
+            <li><a href="#">MongoDB</a></li>
+            <li><a href="#">DB2</a></li>
+        </ul>
+    </li>
+    <li><a href="#">操作系统</a>
+        <ul>
+            <li><a href="#">Linux</a></li>
+            <li><a href="#">Unix</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">Windows</a></li>
+        </ul>
+    </li>
+    <li><a href="#">服务器</a>
+        <ul>
+            <li><a href="#">Tomcat</a></li>
+            <li><a href="#">WebSphere</a></li>
+            <li><a href="#">WebLogicc</a></li>
+        </ul>
+    </li>
+    </ul>
+</div>
+</body>
+</html>
+
+--------------------- 
+
+作者：pangqiandou 
+
+来源：CSDN 
+
+原文：https://blog.csdn.net/pangqiandou/article/details/78328279 
+
+版权声明：本文为博主原创文章，转载请附上博文链接！

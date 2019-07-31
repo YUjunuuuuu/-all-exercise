@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>本地三</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <video width="600" height="400" controls="controls" class="two"></video>
+    <input type="file" id="file_input" accept="video/*" webkitdirectory directory />
+    <ul id="one"></ul>
+</body>
+<script>
+    $("input").change(function(e) { 
+        var file = this.files;
+        var y = 0;
+        for (var i = 0; i < file.length; i++, y++) {
+            var name = e.currentTarget.files[i].name;
+            $("#one").append('<li id="' + y + '">' + name + '</li>');
+            $("#" + y).click(function() {
+                $(".two").attr("src", window.URL.createObjectURL(file[i]));
+
+                 
+                // $("video").get(0).play();
+            })
+
+            // console.log(name);
+            // console.log(window.URL.createObjectURL(file[i]));
+        }
+
+
+    });
+</script>
+
+</html>

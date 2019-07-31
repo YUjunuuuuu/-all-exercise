@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>同步注册时机问题</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           var xhr=new XMLHttpRequest();
+           xhr.open('GET','time.php',false);
+           xhr.send();
+            xhr.onreadystatechange=function(){
+                console.log(this.readyState);
+            }
+            </script>
+    </body>
+</html>

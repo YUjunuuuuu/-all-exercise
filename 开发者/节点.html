@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>节点</title>
+	<script type="text/javascript">
+	function tag2(tagname){return document.getElementsByTagName(tagname);}
+		function operationNode(){
+			var p=tag2("p")[0];
+			document.form1.removeChild(p);
+			//将<h2>元素更换为<h5>元素，并重新设置文本节点的内容
+			var h5=document.createElement("h5");
+			var ptext=document.createTextNode("web前端开发技术!-h5");
+			h5.appendChild(ptext);
+			var h2=tag2("h2")[0];
+			document.form1.replaceChild(h5,h2);
+			var newp=document.createElement("p");
+			var ptext1=document.createTextNode("中国的是世界的!-new p");
+			newp.appendChild(ptext1);
+			document.form1.insertBefore(newp,tag2("b")[0]);
+		}
+	</script>
+</head>
+
+<body>
+	<form name="form1">
+	<h2>javaScript程序设计-h2</h2>
+	<p>hello world! -p</p>
+	<b>世界的也是中国的!-b</b>
+	<input type="button" value="单击修改节点" onClick="operationNode()"></form>
+</body>
+</html>

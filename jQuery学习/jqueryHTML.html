@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jqueryHTML</title>
+</head>
+
+<body>
+    <p id="text"><u>李元东是傻逼么</u></p>
+    <button id="btn1">显示</button>
+    <button id="btn2">显示1</button>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $("#btn1").click(function() {
+            alert("Text:" + $("#text").text());
+        });
+        $("#btn2").click(function() {
+            alert("HTML:" + $("#text").html());
+        })
+    </script>
+
+</body>
+
+</html>

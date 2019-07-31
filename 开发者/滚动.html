@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window</title>
+	<script type="text/javascript">
+	var TimerID;
+		var dir=1;
+		var str_num=0;
+		var str="欢迎来到javascript的世界!";
+		function startStatus(){
+			//设定动态显示的状态栏信息
+			var str_space="";
+			str_num=str_num+1*dir;
+			if(str_num>50||str_num<0)
+				{
+					dir=-1*dir;
+				}
+			for(var i=0;i<str_num;i++)
+				{
+					str_space+="";
+				}
+			window.status=str_space+str;
+		}
+		function MyStart(){
+			TimerID=setInterval("startStatus();",100);
+		}
+		function MyStop(){
+			clearInterval(TimerID);
+			
+		}
+	</script>
+</head>
+
+<body>
+	
+	<br><p id="p1">单击对应的按钮，实现动态状态栏的滚动与停止!</p>
+		<form name="Myform">
+		<input type="button" value="开始状态栏滚动" onClick="MyStart()"><br>
+			<input type="button" value="停止状态栏滚动" onClick="MyStop()"><br>
+		</form>
+
+	
+</body>
+</html>

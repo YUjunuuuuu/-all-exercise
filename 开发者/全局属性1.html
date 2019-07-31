@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>全局属性</title>
+<script type="text/javascript">
+	function emailCheck(){
+	//获取用户输入的邮箱地址相关信息
+	    var emailString=document.forml.email.value;
+	    var emailLength=emailString.length;
+		var index1=emailString.indexOf("@");
+		var index2=emailString.lastIndex(".");
+		var msg="验证邮箱地址实力:\n\n";
+		msg+="邮箱地址:"+emailString+"\n";
+		msg+="验证信息:";
+		if(index1==-1||index2==-1||index2<=index1+1||index1==0||index2==emailLength-1)
+			{
+				msg+="邮箱地址不合法!\n\n"
+				msg+="不能同时满足如下条件:\n";
+				msg+="1,邮箱地址中同时含有'@'和'.'字符\n";
+				msg+="2,'@'后必须有'.',且中间至少间隔一个字符;\n";
+				msg+="3,'@'不为第一个字符,'.'不为最后一个字符\n";
+			}else{
+				msg+="邮箱地址合法!\n\n";
+				msg+="能同时满足如下条件:\n";
+				msg+="1,邮箱地址中同时含有'@'和'.'字符\n";
+				msg+="2,'@'后必须有'.',且中间至少间隔一个字符;\n";
+				msg+="3,'@'不为第一个字符,'.'不为最后一个字符\n";
+			}
+		alert(msg);
+	}
+	</script>
+</head>
+
+<body>
+	<form name="form1">
+	邮箱地址:<input type="text" name="email" value="@">
+	<input type=button value=验证邮箱地址 onClick="emailCheck()">
+	</form>
+</body>
+</html>

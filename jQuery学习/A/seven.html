@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="../bootstrap的副本.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        .head {
+            background-color: red;
+            height: 40px;
+        }
+        
+        .wz2 {
+            margin-top: 8px;
+        }
+        
+        .head1 {
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        .lb {
+            height: 250px;
+        }
+        
+        .nr {
+            height: 600px;
+            margin-top: 10px;
+        }
+        
+        .nr1 {
+            height: 300px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        
+        .nr2 {
+            height: 30px;
+            background-color: rgb(60, 105, 126);
+            color: white;
+            text-align: center;
+        }
+        
+        .nr3 {
+            height: 25px;
+            border-bottom-style: dashed;
+            border-width: 1px;
+        }
+        
+        .right {
+            height: 40px;
+            border-bottom-style: solid;
+            border-bottom-color: red;
+        }
+        
+        .wz {
+            line-height: 40px;
+        }
+        
+        .right1 {
+            height: 70px;
+            border-bottom-style: dashed;
+            border-bottom-width: 1px;
+        }
+        
+        .right2 {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 16px;
+            color: blue;
+        }
+        
+        .right3 {
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+        
+        .right4 {
+            height: 480px;
+            border-bottom-style: dashed;
+            border-width: 1px;
+        }
+        
+        .right5 {
+            height: 40px;
+            color: blue;
+            text-align: center;
+            box-shadow: 1px 1px 2px #333333;
+            width: 130px;
+            border-radius: 5px;
+        }
+        
+        .right6 {
+            line-height: 40px;
+        }
+        
+        .op {
+            margin-top: 15px;
+        }
+        
+        .zd {
+            height: 20px;
+            padding-left: 50px;
+        }
+        
+        .foot {
+            height: 50px;
+            background-color: black;
+            margin-top: 20px;
+        }
+        
+        .foot1 {
+            height: 15px;
+            color: aliceblue;
+            text-align: center;
+        }
+        
+        @media only screen and (max-width: 800px) {
+            .head1 {
+                font-size: 8px;
+            }
+            .wz2 {
+                padding: 0px;
+            }
+            .head {
+                height: 20px
+            }
+            .lb {
+                height: 100px;
+            }
+            .nr3 {
+                padding: 0px;
+                font-size: 8px;
+                height: 14px;
+            }
+            .nr {
+                padding-left: 0px;
+            }
+            .wz3 {
+                padding: 0px;
+                font-size: 8px;
+            }
+            .wz4 {
+                padding: 0px;
+                font-size: 8px;
+            }
+            .right1 {
+                height: 35px;
+            }
+            .right2 {
+                padding: 0px;
+                height: 25px;
+                font-size: 8px;
+                line-height: 25px;
+            }
+            .right3 {
+                padding: 0px;
+                font-size: 8px;
+                height: 10px;
+                line-height: 10px;
+            }
+            .right4 {
+                height: 200px;
+            }
+            .right5 {
+                margin-top: -280px;
+                width: 60px;
+                height: 40px;
+                font-size: 8px;
+                padding: 0px;
+            }
+            .op {
+                margin-top: -230px;
+            }
+            .zd {
+                padding: 0px;
+                font-size: 7px;
+            }
+            .foot {
+                font-size: 8px;
+            }
+        }
+    </style>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            $(".aj11").click(function() {
+                $(".contain").load("h.html"),
+                    $(".breadcrumb").append('<li><a href="#">' + $(".aj11").text() + '</a></li>');
+            })
+            $(".aj22").click(function() {
+                $(".contain").load("h.html"),
+                    $(".breadcrumb").append('<li><a href="#">' + $(".aj22").text() + '</a></li>');
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row nr">
+            <div class="col-md-2 col-xs-2">
+                <div class="row">
+                    <div class="col-md-10 col-xs-10 nr1">
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12 nr2 nr3">
+                                <b>学生组织</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12 nr3 aj11"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span> <b><a href="#">图管会</a></b></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12 nr3 aj22"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span><b><a href="#">学生网络运维部</a></b></div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 col-xs-10">
+                <div class="row right">
+                    <div class="col-md-2 col-xs-2 wz3">
+                        <div class="wz"><b>部门介绍</b></div>
+                    </div>
+                    <div class="col-md-6 col-xs-5"></div>
+                    <div class="col-md-4 col-xs-5 wz4">
+                        <ol class="breadcrumb">
+                            <li><a href="#">首页</a></li>
+
+                        </ol>
+                    </div>
+                </div>
+                <div class="contain">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12 right1">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12 right2">本馆概况</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12 right3">发布人：website_tsg 时间：2014-12-10 10:50:32 阅读次数：35239</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12 right4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>

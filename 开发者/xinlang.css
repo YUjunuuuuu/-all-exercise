@@ -1,0 +1,87 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+.top{
+	height: 50px;
+	width:100%;
+	background-color: #194477;
+}
+.top_guding{
+	height: 50px;
+	width:80%;
+	margin: 0px auto;
+	background-color: #1455C7;
+	 
+}
+.top_left{
+	width:60%;
+	height: 50px;
+	float:left;
+}
+.logo{
+	width:130px;
+	float:left;
+}
+.sousuo{
+	width:55%;
+}	
+.search{
+	width: 200px;
+	height: 30px;
+	margin-top:8px;
+	margin-left:30px;
+	position: relative;
+	float:left;
+}
+.fangdajing{
+	position:relative;
+    top:5px;
+	right:40px;
+	
+	
+}
+.top_right{
+	float:left;
+	width: 40%;
+	margin-top: 10px;
+}
+.ul_top{
+	list-style-type: none;
+	font-size:18px;
+	
+	padding-right: 10px;
+	padding-left: 10px;	
+}
+li{
+	display: inline;	
+	
+}
+.center_left{
+	width:20%;
+	float:left;
+	
+}
+.center_center{
+	width:50%;
+	float:left;
+}
+.center_right{
+	width:30%;
+	float:left;
+	
+}
+.ul_left{
+	
+}
+a{
+	tell-decoration:none;
+}
+
+
+
+
+
+
+
+

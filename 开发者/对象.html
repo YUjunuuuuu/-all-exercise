@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>对象</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+	function Person(){
+		Person.name="Nicholas";
+		Person.age=29;
+		Person.job="Software Engineer";
+		Person.sayName=function(){
+			alert(this.name);
+		}
+	};
+		var person1=new Person();
+		person1.sayName();
+		var person2=new Person();
+		person2.sayName();
+		alert(person1.sayName==person2.sayName);
+	</script>
+</body>
+</html>

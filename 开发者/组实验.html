@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>实验</title>
+	<link href="bootstrap-3.3.7-dist/css/bootstrap.min的副本.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<form>
+	<input type="text" value=" " style="width:200px;height:200px" id="one" >
+		<input type="button" value="提交" style="width:100px;height: 60px;background-color: darkorange" id="two" onClick="creat()">
+</form>
+	<div id="map"></div>
+	<script type="text/javascript">
+	setInterval(function (){
+			var a=document.getElementById("one");
+			if(a.value!="")
+				document.getElementById("two").style.backgroundColor="red";
+		else
+			document.getElementById("two").style.backgroundColor="darkorange";
+	
+		},10);
+		function creat(){
+			var p=document.createElement("p");
+			p.className="bg-primary";
+			p.id="tr";
+			p.innerHTML="我是大帅哥";
+			document.getElementById("map").appendChild(p);
+			var w=document.createElement("button");
+			w.type="button";
+			w.class="close";
+			w.id="tree";
+			w.setAttribute("data-dismiss","alert");
+			w.setAttribute("aria-label","Close");
+			p.appendChild(w);
+			var c=document.createElement("span");
+			c.setAttribute("aria-hidden","true");
+			c.innerHTML="&times;";
+			w.appendChild(c);
+		}
+	</script>
+</body>
+</html>

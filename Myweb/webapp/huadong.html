@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>滑动特效</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+        }
+        
+        .one {
+            list-style: none;
+            width: 400px;
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+        }
+        
+        .two {
+            float: left;
+            text-align: center;
+            background-color: black;
+            color: white;
+            line-height: 50px;
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="one">
+        <li class="two" onMouseOver="bbh()">主页</li>
+        <li class="two" onMouseOver="bbh1()">青岛星网</li>
+        <li class="two" onMouseOver="bbh2()">关于我们</li>
+        <li class="two" onMouseOver="bbh3()">联系我们</li>
+        <li class="two" onMouseOver="bbh4()">支持星网</li>
+    </ul>
+    <script type="text/javascript">
+        var h = document.createElement("div");
+        h.style.width = "80px";
+        h.style.height = "50px";
+        h.style.backgroundColor = "blue";
+        h.style.position = "absolute";
+        h.style.color = "white";
+        h.style.lineHeight = "50px";
+        h.style.textAlign = "center";
+        h.innerHTML = "主页";
+        var j = 0;
+        h.style.left = j + "px";
+        document.body.appendChild(h);
+
+        function bbh() {
+            h.innerHTML = "主页";
+
+
+            function bh() {
+                j = j - 10;
+                h.style.left = j + "px";
+                if (j == 0) {
+                    clearInterval(intervalId);
+                }
+                h.style.transition = "left 0.5s"
+            }
+            intervalId = setInterval(bh, 20);
+        }
+
+        function bbh1() {
+            h.innerHTML = "青岛星网";
+
+            function bh1() {
+                if (j < 80) {
+                    j = j + 10;
+                    h.style.left = j + "px";
+                    if (j == 80) {
+                        clearInterval(intervalId);
+
+                    }
+                } else {
+                    j = j - 10;
+                    h.style.left = j + "px";
+                    if (j == 80) {
+
+                        clearInterval(intervalId);
+
+                    }
+                }
+                h.style.transition = "left 0.5s"
+            }
+            intervalId = setInterval(bh1, 20);
+        }
+
+        function bbh2() {
+            h.innerHTML = "关于我们";
+
+            function bh2() {
+
+                if (j < 160) {
+                    j = j + 10;
+                    h.style.left = j + "px";
+                    if (j == 160) {
+                        clearInterval(intervalId);
+
+                    }
+                } else {
+                    j = j - 10;
+                    h.style.left = j + "px";
+                    if (j == 160) {
+                        clearInterval(intervalId);
+
+                    }
+                }
+                h.style.transition = "left 0.5s"
+
+            }
+            intervalId = setInterval(bh2, 20);
+        }
+
+        function bbh3() {
+            h.innerHTML = "联系我们";
+
+            function bh3() {
+
+                if (j < 240) {
+                    j = j + 10;
+                    h.style.left = j + "px";
+                    if (j == 240) {
+                        clearInterval(intervalId);
+
+                    }
+                } else {
+                    j = j - 10;
+                    h.style.left = j + "px";
+                    if (j == 240) {
+                        clearInterval(intervalId);
+
+                    }
+                }
+                h.style.transition = "left 0.5s"
+
+            }
+            intervalId = setInterval(bh3, 20);
+        }
+
+        function bbh4() {
+            h.innerHTML = "支持星网";
+
+            function bh4() {
+
+                if (j < 320) {
+                    j = j + 10;
+                    h.style.left = j + "px";
+                    if (j == 320) {
+                        clearInterval(intervalId);
+
+                    }
+                } else {
+                    j = j - 10;
+                    h.style.left = j + "px";
+                    if (j == 320) {
+                        clearInterval(intervalId);
+
+                    }
+                }
+                h.style.transition = "left 0.5s"
+
+            }
+            intervalId = setInterval(bh4, 20);
+        }
+    </script>
+</body>
+
+</html>

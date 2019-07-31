@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>样本</title>
+	
+	
+	
+</head>
+
+<body>
+<div id="sto" style="display:none">
+	今天是十月二十五号
+距离你的生日已经有整整两天了
+希望这个迟到的礼物能让你开心
+昨天凌晨听到你说你弟弟要来陪你过生日我其实是很惊讶的
+很明显，我把0915当成了你的阳历生日，当时我的大脑就是一片空白
+既然是你的生日，我想送你一个特别的礼物，因为送过的礼物多了，觉得买的东西太俗气
+想了很久，决定自己做一个网页来祝你生日快乐😄
+其实网页我也是才学，特效还不怎么会，但是不会也必须强行整几个特效
+转眼间我们相识也有四个月了，😯其实时间过的还挺快，我已经记不清我们是怎么认识的了，反正就这么认识了😂
+额，刚刚敲到这突然被发现了，一脸懵逼。
+但我还是要写下去，一直以来，我都不会表达我的感情，也许这是理科男的通病吧。
+你说你不喜欢土味情话😂，其实我也挺恶心土味情话，但是你就先听着吧😄
+毕竟你要知道我在敲这段文字的时候我也不好受😂</div>
+	<p id="show"></p>
+	<script>
+	window.onload=function(){
+  var story = document.getElementById('sto');
+  var s = document.getElementById('show');
+  var a = story.innerHTML.slice("");
+  var i = 0;
+  timer=setInterval(function(){
+    s.innerHTML=story.innerHTML.substring(0,i)
+    i++;
+    if(s.innerHTML==story.innerHTML){clearInterval(timer);};
+  },500);
+}</script>
+</body>
+</html>

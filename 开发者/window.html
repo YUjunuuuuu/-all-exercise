@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+//	var leftPops=(typeof window.screenLeft=="number")?window.screenLeft:window.screenX;
+//		var topPops=(typeof window.screenTop=="number")?window.screenTop:window.screenY;
+//		console.log(leftPops);
+//		console.log(topPops);
+//		var wroxWin=window.open("http://www.wrox.com","_blank");
+//		if(wroxWin==null)
+//			alert("The popup was blocked!");
+	function getQueryStringArgs(){
+		var qs=(location.search.length>0?location.search.substring(1):""),
+			args{},
+				items=qs.length?qs.split("&"):[],
+					item=null,
+					name=null,value=null,i=0,len=items.length;
+		for(i=0;i<len;i++){
+			item=items[i].split("=");
+			name=decodeURIComponent(item[0]);
+			value=decodeURIComponent(item[1]);
+			if(name.length){
+				args[name]=value;
+			}
+		}
+		return args;
+	}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ajax实战</title>
+    <link href="/Users/macyj/Desktop/校内电子资源页面设计/bootstrap.min.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container pt-4">
+        <h1>会员中心</h1>
+        <hr>
+        <div class="row">
+            <aside class="col-md-3">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-action" href="ajax2.html">我的资料</a>
+                    <a class="list-group-item list-group-item-action" href="ajax3.html">我的购物车</a>
+                    <a class="list-group-item list-group-item-action" href="ajax4.html">我的订单</a>
+                </div>
+            </aside>
+            <main id="main" class="col-md-9">
+                <h2>我的购物车</h2>
+                <hr>
+            </main>
+        </div>
+    </div>
+    <script src="../jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function($) {
+            $('.list-group-item').on('click', function() {
+                var url = $(this).attr('href')
+                $('#main').load(url + ' #main > *')
+                return false
+            })
+        })
+    </script>
+</body>

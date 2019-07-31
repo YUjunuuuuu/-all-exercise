@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>dom操作</title>
+    </head>
+    <body>
+        <!-- 1,内容操作
+        (1)html():获取/设置元素标签体内容
+        (2)text():获取/设置元素标签体纯文本内容
+        (3)val() :获取/设置元素的value属性值
+        2,属性操作
+        (1)通用属性操作
+        1 attr():获取/设置元素的属性 建议范围：用户自定义
+        2 removeAttr():删除属性
+        3 prop():获取/设置元素的属性 建议范围：本来就有的属性
+        4 removeProp():删除属性
+        (2)对class属性操作
+        1 addClass():添加class属性
+        2 removeClass():删除class属性值
+        3 toggleClass():切换class属性 -->
+        <!-- 例：toggleClass("one"):判断如果元素对象上存在class="one",则将属性值one删除掉。如果元素对象上不存在class="one",则添加 -->
+
+        3,CRUD操作
+        1 append():父元素将子元素追加到末尾
+        例 对象1.append(对象2):将对象2添加到对象1元素内部，并且在末尾
+        2 prepend():父元素将子元素追加到开头
+        对象1.prepend(对象二):将对象添加到对象1元素的内部，并且在开头
+        3 appendTo():
+        对象1.appendTo(对象2):将对象1添加到对象2内部，并且在末尾
+        4 prependTo():
+        对象1.prependTo(对象2):将对象1添加到对象2内部，并且在开头
+        5 after():添加元素到元素后边
+        对象1.after(对象2):将对象2添加到对象1后边，两人是兄弟关系
+        6 before():添加元素到元素前边
+        对象1.before(对象2):将对象2添加到对象1前边，两人是兄弟关系
+        7 insertAfter()
+        对象1.insertAfter(对象2):将对象1添加到对象2后边。两人是兄弟关系
+        8 insertBefore()
+        对象1.insertBefore(对象2):将对象2添加到对象一前边。两人是兄弟关系
+        9 remove():移除元素
+        对象.remove():将对象删除掉
+        10 empty():清空元素的所有的后代元素
+        对象.empty():将所有的后代元素全部清空，但是保留当前对象以及其属性节点
+        11 clone():复制当前节点
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ajax的封装</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //封装的套路
+        //1,写一个相对比较完善的用例
+        //2，写一个空函数，没有形参.将刚刚的用例直接作为函数的函数体
+        //根据使用过程中的需求抽象参数
+        function ajax() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'text.php');
+            xhr.send();
+            xhr.onreadystatechange = function() {
+                if (this.readyState !== 4) return
+                console.log(this.responseText)
+            }
+        }
+        ajax();
+        ajax();
+    </script>
+</body>
+
+</html> 

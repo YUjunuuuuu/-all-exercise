@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html" charset="UTF-8">
+    <title>OK</title>
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-12"><img class="img-responsive" src="images/图文信息中心LOGO.png">
+            </div>
+        </div>
+        <div class="header">
+            <div id="list">
+                <ul>
+                    <li><a href="index.html" class="sy">首页</a></li>
+                    <li><a href="Demo3_B.html" class="sy">部门介绍</a></li>
+                    <li><a href="Demo3_D.html" class="sy">规章制度</a></li>
+                    <li><a href="Demo3_F.html" class="sy">馆藏资源</a></li>
+                    <li><a href="wlfw.html" class="sy">网络服务</a></li>
+                    <li><a href="Demo3_C.html" class="sy">电子资源</a></li>
+                    <li><a href="Demo3_E.html" class="sy">书香校园</a></li>
+                    <li><a href="Demo3_H.html" class="sy">学生组织</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="conbg">
+
+        </div>
+
+        <div class="main">
+            <dl class="left">
+
+                <dt>书香校园</dt>
+                <dd><a href="#" class="one1">书香工程</a></dd>
+                <dd><a href="#" class="one2">课外阅读</a></dd>
+                <dd><a href="#" class="one3">好书推荐</a></dd>
+                <dd><a href="#" class="one4">图书捐赠</a></dd>
+                <dd><a href="#" class="one5">读者荐购</a></dd>
+
+            </dl>
+
+            <div class="cont">
+                书香工程
+                <em float:right class="one6">
+						
+					</em>
+
+                <hr/>
+                <div class="aaa">
+                    <h1 class="aaa1">书香工程</h1>
+                    <h3>发布人:xxx 时间:xxxx-xx-xx xx:xx:xx</h3>
+                    <hr/>
+                </div>
+
+                <div>
+                    <h2 style="text-indent:2em">
+                        此处内容还在编辑中...<br/>
+                    </h2>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="bbb">
+
+
+            <ul>
+                <li>
+                    <select>
+							<option value="">····校内站点····</option>
+							<option value="">没了</option>
+						</select>
+                </li>
+
+                <li>
+                    <select>
+							<option value="">····图片链接····</option>
+							<option> value=""没了</option>
+						</select>
+                </li>
+
+                <li>
+                    <select>
+							<option value="">····高校站点····</option>
+							<option value="">没了</option>
+						</select>
+                </li>
+
+                <li>
+                    <select>
+							<option value="">····档案链接····</option>
+							<option value="">没了</option>
+						</select>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="foot">
+            <p>联系电话:027-81820331</p>
+            <p>&copy;2008 武汉工程科技学院 WUHAN UNIVERSITY OF ENGINEERING SCINECE.</p>
+            <p id="tj">
+                <span style="display:none"></span>鄂ICP备08005729号
+            </p>
+        </div>
+
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            $(".one1").click(function() {
+
+                $(".one6").append('<a href="#">' + ">" + $(".one1").text() + '</a>');
+                $(".aaa1").text($(".one1").text());
+
+            })
+            $(".one2").click(function() {
+
+                $(".one6").append('<a href="#">' + ">" + $(".one2").text() + '</a>');
+                $(".aaa1").text($(".one2").text());
+            })
+            $(".one3").click(function() {
+
+                $(".one6").append('<a href="#">' + ">" + $(".one3").text() + '</a>');
+                $(".aaa1").text($(".one3").text());
+            })
+            $(".one4").click(function() {
+
+                $(".one6").append('<a href="#">' + ">" + $(".one4").text() + '</a>');
+                $(".aaa1").text($(".one4").text());
+
+            })
+            $(".one5").click(function() {
+
+                $(".one6").append('<a href="#">' + ">" + $(".one5").text() + '</a>');
+                $(".aaa1").text($(".one5").text());
+            })
+        })
+    </script>
+</body>
+
+
+
+</html>

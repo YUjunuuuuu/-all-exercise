@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>canvas绘图</title>
+</head>
+
+<body>
+	<canvas id="drawing" width="200" height="200">A drawing of something.</canvas>
+	<script type="text/javascript">
+	var drawing=document.getElementById("drawing");
+		if(drawing.getContext){
+			var context=drawing.getContext("2d");
+		}
+	</script>
+</body>
+</html>

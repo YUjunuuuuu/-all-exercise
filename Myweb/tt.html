@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSON实验</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var book = {
+            title: "Professional Javascript",
+            authors: [
+                "Nicholas C. Zakas"
+            ],
+            edition: 3,
+            year: 2011
+        };
+        var js = new JSON();
+        var jsonText = js.stringify(book);
+        console.log(jsonText);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html" charset="UTF-8">
+    <title>OK</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap的副本.css">
+</head>
+
+<body>
+    <!-- <div class="container"> -->
+    <div class="row">
+        <div class="col-md-6 col-xs-12"><img class="img-responsive" src="images/图文信息中心LOGO.png">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <div class="header">
+                <div id="list">
+                    <ul>
+                        <li><a href="index.html" class="sy">首页</a></li>
+                        <li><a href="Demo3_B.html" class="sy">部门介绍</a></li>
+                        <li><a href="Demo3_D.html" class="sy">规章制度</a></li>
+                        <li><a href="Demo3_F.html" class="sy">馆藏资源</a></li>
+                        <li><a href="wlfw.html" class="sy">网络服务</a></li>
+                        <li><a href="Demo3_C.html" class="sy">电子资源</a></li>
+                        <li><a href="Demo3_E.html" class="sy">书香校园</a></li>
+                        <li><a href="Demo3_H.html" class="sy">学生组织</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <div class="conbg"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="main">
+            <div class="col-md-3 col-xs-3">
+                <dl class="left">
+
+                    <dt>部门介绍</dt>
+                    <dd><a href="#" class="one1">部门概况</a></dd>
+                    <dd><a href="#" class="one3">组织结构</a></dd>
+                    <dd><a href="#" class="one4">联系方式</a></dd>
+
+                </dl>
+            </div>
+            <div class="col-md-9 col-xs-9">
+                <div class="cont">
+                    部门介绍
+                    <em float:right class="one2">
+						
+					          </em>
+
+                    <hr/>
+
+                    <div class="aaa">
+                        <div class="bm">
+                            <h1 class="aaa1">部门介绍</h1>
+                        </div>
+                        <h3>发布人:xxx 时间:xxxx-xx-xx xx:xx:xx</h3>
+                        <hr/>
+                    </div>
+                    <h2 style="text-indent:2em">
+                        <p>
+                            此处内容还在编辑中...
+                        </p>
+                        <p>
+
+                        </p>
+                        <br/>
+                    </h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <div class="bbb">
+
+
+                <ul>
+                    <div class="col-md-3 col-xs-3">
+                        <li>
+                            <select>
+							<option value="">····校内站点····</option>
+							<option value="">没了</option>
+						</select>
+                        </li>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <li>
+                            <select>
+							<option value="">····图片链接····</option>
+							<option value="">没了</option>
+						</select>
+                        </li>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <li>
+                            <select>
+							<option value="">····高校站点····</option>
+							<option value="">没了</option>
+						</select>
+                        </li>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <li>
+                            <select>
+							<option value="">····档案链接····</option>
+							<option value="">没了</option>
+						</select>
+                        </li>
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="col-md-12 col-xs-12 foot ">
+            <div class="row ">
+                <div class="col-md-12 col-xs-12 foot1 ">联系电话:027-81820331</div>
+            </div>
+            <div class="row ">
+                <div class="col-md-12 col-xs-12 foot1 ">2008 武汉工程科技学院 WUHAN UNIVERSITY OF ENGINEERING SCINECE</div>
+            </div>
+            <div class="row ">
+                <div class="col-md-12 col-xs-12 foot1 ">鄂ICP备08005729号</div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            $(".one1").click(function() {
+
+                $(".one2").append('<a href="#">' + ">" + $(".one1").text() + '</a>');
+                $(".aaa1").text($(".one1").text());
+
+            })
+            $(".one3").click(function() {
+
+                $(".one2").append('<a href="#">' + ">" + $(".one3").text() + '</a>');
+                $(".aaa1").text($(".one3").text());
+            })
+            $(".one4").click(function() {
+
+                $(".one2").append('<a href="#">' + ">" + $(".one4").text() + '</a>');
+                $(".aaa1").text($(".one4").text());
+            })
+        })
+    </script>
+</body>
+
+
+
+</html>

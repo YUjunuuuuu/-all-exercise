@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body
+			{
+				text-align:center;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<h1>
+			<a href="http://www.w3school.com.cn/jsref/dom_obj_dialog.asp" target="blank" onclick="alert('导航至HTML DOM Dialog 对象')">
+				a标签的弹窗
+			</a>
+		</h1>
+		
+		<button onclick="a()" onclick="alert('这里用了Dialog 对象')">按钮</button>
+		
+		<dialog id="b">这里是显示内容<br/>w3c手册更加清晰，对话框要用到函数</dialog> <!--通过使用 getElementById() 来访问 <dialog> 元素-->
+		
+		
+		<script >
+			function a()
+			{
+				var x = document.getElementById("b"); //访问Dialog对象
+				x.open = true;
+			}
+		</script>
+		
+		
+		
+	</body>
+	
+</html>

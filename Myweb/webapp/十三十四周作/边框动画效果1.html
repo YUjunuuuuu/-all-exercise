@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>边框动画效果1</title>
+    <style type="text/css">
+        .one {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        
+        .one:before,
+        .one:after {
+            content: "";
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border: 2px solid transparent;
+            box-sizing: border-box;
+            display: block;
+        }
+        
+        .one:before {
+            top: 0px;
+            left: 0px;
+            transition: border-color 0s ease-in 0.8s, height 0.2s ease-in 0.4s, width 0.2s ease-in 0.6s;
+        }
+        
+        .one:after {
+            right: 0px;
+            bottom: 0px;
+            transition: border-color 0s ease-in 0.4s, height 0.2s ease-in, width 0.2s ease-in 0.2s
+        }
+        
+        .one:hover:before {
+            width: 100%;
+            height: 100%;
+            transition: width 0.2s ease-in 0s, height 0.2s ease-in 0.2s;
+            border-top-color: blue;
+            border-right-color: blue;
+        }
+        
+        .one:hover:after {
+            width: 100%;
+            height: 100%;
+            transition: border-color 0s ease-in 0.4s, width 0.2s ease-in 0.4s, height 0.2s ease-in 0.6s;
+            border-bottom-color: blue;
+            border-left-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>weaprj</title>
+    <style type="text/css">
+    .app{
+    width:800px;
+    height:400px;
+    border: 1px solid red;
+    display:flex;
+    flex-direction:row;
+    }
+    .sw{
+    flex-shrink:0;
+    width:50px;
+    height:100%;
+    border: 1px solid black;
+    position:relative
+    }
+    .point{
+    width:2px;
+    height:2px;
+    background: red;
+    position:absolute;
+    bottom: 0px;
+    transform:scaleY(1)
+    }
+    .circle{
+    width:8px;
+    height: 8px;
+    border-radius:4px;
+    background: green;
+    position:absolute;
+    bottom:-4px;
+    left:-4px
+    }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+    <div class="sw"><div class="circle"></div><div class="point">sw</div></div>
+    <div class="sw"><div class="circle"></div><div class="point">sw</div></div>
+    <div class="sw"><div class="circle"></div><div class="point">sw</div></div>
+    <div class="sw"><div class="circle"></div><div class="point">sw</div></div>
+    <div class="sw"><div class="circle"></div><div class="point">sw</div></div>
+    <div class="sw"><div class="circle"></div><div class="point">sw</div></div>
+    <div class="sw"><div class="circle"></div><div class="point">sw</div></div>
+    <div class="sw"><div class="circle"></div><div class="point">sw</div></div>
+    <div class="sw"><div class="circle"></div><div class="point">sw</div></div>
+    <div class="sw"><div class="circle"></div><div class="point">sw</div></div>
+    <div class="sw"><div class="circle"></div><div class="point">sw</div></div>
+    </div> 
+  </body>
+  <script>
+    window.onload=function(){
+    var vvv=[35, 25, 35, 22, 23, 23, 26, 25, 26, 25, 25, 25, 36, 36, 25, 20, 20, 25, 22, 20, 20, 12, 18, 25];
+    var distance =[];
+    var le=[];
+    var deg =[];
+    var realdeg=[]
+    var pianyi =[];
+    var a=50;
+    var middle=[];
+for(var i=1;i<vvv.length;i++){
+    var tempdis=vvv[i]-vvv[i-1];
+    distance.push(tempdis)
+}
+//计算le，deg，pianyi
+for(var i=0;i<distance.length;i++){
+//计算长度
+  var temple = Math.sqrt(distance[i]*distance[i]+a*a)
+  le.push(temple)
+  //计算长度
+  //计算角度
+  var tempdeg=Math.atan(distance[i]/a)*180/3.1415
+  deg.push(tempdeg)
+   //计算角度  
+}
+//计算偏移量
+for(var j=0;j<le.length;j++){
+   var temppianyi = (le[j]-a)*0.5
+   pianyi.push(temppianyi)
+   // console.log(pianyi);
+}
+ //计算偏移量
+ 
+ //计算中值
+ for(var j=1;j<vvv.length;j++){
+  var tempmiddle = (vvv[j]+vvv[j-1])/2;
+  middle.push(tempmiddle)
+ }
+ for(var j=0;j<deg.length;j++){
+ var tempdeg=0
+ tempdeg=-deg[j]
+ realdeg.push(tempdeg)
+ }
+ //计算中值
+ console.log(distance);
+ console.log(le);
+ console.log(deg);
+ console.log(middle);
+ console.log(realdeg)
+     var point=document.getElementsByClassName("point");
+     var circle=document.getElementsByClassName("circle");
+     for(var i=0;i<10;i++){
+     point[i].style.width=le[i]+'px'
+     point[i].style.bottom=middle[i]+'px'
+      point[i].style.left="-"+pianyi[i]+'px'
+      var rot=realdeg[i]
+      console.log(rot)
+      circle[i].style.bottom=(vvv[i]-4)+'px'
+     point[i].style.transform='rotate'+'('+rot+'deg'+')'
+     }
+    }
+    </script>
+</html>
+
+
+
+--------------------- 
+
+作者：wangnima666 
+
+来源：CSDN 
+
+原文：https://blog.csdn.net/wangnima666/article/details/84712474 
+
+版权声明：本文为博主原创文章，转载请附上博文链接！

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>展示作业</title>
+	<style type="text/css">
+		
+		#first{font-size:2em;font-weight:200;}
+		.second{font-size:1.5em;}
+		.third{font-size:2em}
+		#fourth{text-align: center;}
+		#fifth{text-indent: 2em;font-style:italic}
+		.sixth{text-indent:2em;}
+		.seventh{text-decoration: underline; text-indent: 3em;}
+		.eiegth{color:brown}
+		.ninth{text-indent: 2em;}
+		#tenth{text-align: center}
+	</style>
+</head>
+
+<body>
+	<p id="first">网页文本排版实例</p>
+	<p class="second">未应用css样式网页:</p>
+	<p class="second" id="fourth">《第10章 Dreamweaver中层叠样式表的创建及使用》教案</p>
+	<p class="second">教学目标</p>
+	<p class="second" id="fifth">层叠样式表（CSS）是网页设计工作者制作网页时经常使用的工具。利用它，可以统一定制网页文本、图片、表格等多种网页元素的样式，可以设计出更加丰富多彩的网页效果，而且能够迅速地将样式应用于整个网站的多个网页上。</p>
+	<p class="second" class="sixth">通过本章的教学，要求学生掌握以下基本内容：</p>
+	<ol>
+	<li class="second" class="seventh">了解层叠样式表的基本知识。</li>
+	<li class="second" class="seventh">掌握在Dreamweaver文档中利用CSS面板创建层叠样式表的基本方法。</li>
+	<li class="second" class="seventh">掌握将CSS样式应用到各种网页元素上的方法。</li>
+	<li class="second" class="seventh">掌握修改CSS样式的方法，并观察到该修改对网页外观的影响。</li>
+	<li class="second" class="seventh">掌握管理CSS层叠样式表的基本方法,<font size="+2">学会将外部样式表链接到网站的多个网页上，以便直接应用已创建好的CSS样式，统一多个网页的外观.</font></li></ol>
+	<p class="second" id="eiegth">教学内容</p>
+	<ul><li class="second">CSS层叠样式表的基本知识：内联式样式表、嵌入式样式表、外部样式表。</li>
+	<li class="second">在Dreamweaver中，使用CSS面板创建、应用、修改CSS层叠样式。</li>
+	<li class="second">链接外部样式表。</li></ul>
+	<p class="second" id="eiegth" class="sixth">教学重点</p>
+	<ul>
+	<li class="second">创建CSS样式。</li>
+	<li class="second">应用CSS样式。</li>
+	<li class="second">修改CSS样式。</li>
+	<li class="second">链接外部样式表。</li></ul>
+	<p class="second" class="sixth">教学形式</p>
+	<p class="second" class="sixth">课堂讲授与网络自学相结合</p>
+ <p class="second" class="sixth">教学辅助手段</p>
+	<ul>
+	<li class="second">通过多媒体屏幕广播或屏幕投影，学生可实时观看教师的操作演示过程。</li>
+	<li class="second">学生可以访问网络教学站点。教学站点提供了重点操作的Flash动画演示。</li></ul>
+	<p class="second" class="sixth">教学时间安排：1课时（45分钟）</p>
+	<ul><li class="second">层叠样式表的基础知识：10分钟。</li>
+	<li class="second">创建和应用CSS样式：15分钟。</li>
+	<li class="second">修改CSS样式：5分钟。</li>
+	<li class="second">链接外部样式表：5分钟。</li>
+	<li class="second">小结：10分钟。</li></ul>
+	<p class="second" class="sixth">教学方法与过程</p>
+	<p class="second" class="sixth">首先介绍为何在网页设计中引入层叠样式表的概念，使学生对层叠样式表的作用有一个感性的认识。然后介绍层叠样式表的基本种类。接着介绍利用CSS面板创建CSS样式、应用CSS样式以及修改CSS样式的方法。其后，介绍如何为网站的多个网页链接已有的外部样式表。最后，进行小结。</p>
+	<p class="third">一、引言（引入学习本章节的原因，简单介绍有关概念，并提示本节课程的主要内容）</p>
+	<ol><li class="second">什么是样式？<p>样式是用来控制网页外观的一组格式。</p></li>
+	<li class="second">为什么在网页设计中使用样式？<p>当网页中的多个元素需要使用相同的格式时，我们需要使用一种更为高效的格式设置方法。</p><p>如果把一组格式归纳起来，用一个名称命名，那么，这组格式就变成了一个样式。</p><p>对网页中的多个元素，只需给他们应用样式，他们就具有了相同的格式。此外，当样式中的格式被修改之后，网页中所有应用了该样式的元素，其格式也发生了自动更新。</p></li>
+		<li class="second">什么是层叠样式表？<p>层叠样式表CSS（Cascading Style Sheet）是统一管理网页中各种样式的一种方式。它是一组格式设置规则，用于控制网页外观。</p>
+			<p>一个网页对象（文本、图象、表格等）可以被多层的样式表来修饰，但是最终以优先级最高的样式表所定义的格式来显示。这也是“层叠”样式表名称的由来。</p>
+			<p>层叠样式表可以同时被多个网页链接。当样式表内的样式更新或被修改之后，所有应用了该样式表的文档都会被自动更新。</p>
+			<p>下面，我们首先了解一下层叠样式表有哪些类型，然后学习Dreamweaver中CSS样式的创建、应用及修改。</p></li></ol>
+	<p class="third">二、层叠样式表的类型</p>
+	<p class="second">三类。内联式样式表、嵌入式样式表、外部样式表。</p>
+	<ol><li class="second">内联式样式表：<p>是在某个特定的标签内使用style属性定义CSS样式。这种定义只对使用了style属性的标签有效，子标签可以继承父标签的样式。</p><p>&lt;p style=&quot;color:#000000;background:yellow;&quot;&gt;这段文字背景色为&lt;I&gt;黄色&lt;&frasl;I&gt;&lt;&frasl;p&gt;</p></li>
+	<li class="second">嵌入式样式表<p>是一系列包含在 HTML 文档 head 部分的 style 标签内的CSS 样式。</p><p>&lt;head&gt;</p><p>&lt;style type=&quot;text&frasl;css&gt;</p><p>&lt;!--&gt;</p><p>p{color:red;font-family:宋体;font-weight:bold}</p><p>&hellip;</p><p>--&gt;</p><p>&lt;&frasl;style&gt;</p><p>&lt;&frasl;head&gt;</p></li>
+	<li class="second">外部样式表<p>是一系列存储在一个单独的外部 .css 文件中的 CSS 样式。利用HTML文档 head 部分中的link标签，该文件被链接到 Web 站点中的一页或多页上。</p><p>&lt;head&gt;</p><p>&lt;link rel=stylesheet href=&quot;mystyle.css&quot;type=&quot;text&frasl;css&quot;&gt;</p><p>&lt;&frasl;head&gt;</p></li></ol>
+	<p class="third">例：参考css.htm。（向学生演示三种不同的样式表代码）</p>
+	<table border="1px" width="700px">
+	<tr class="second">
+		<td colspan="2" id="tenth">本章要点</td></tr>
+	<tr class="second"><td width="30%">创建css样式</td>
+		<td><ol type="(1)"><li>打开CSS样式面板→面板底部的“+”图标。</li>
+			<li>样式的种类：<ul type="disc"><li>自定义样式：自己创建一个网页样式。</li>
+				<li>重定义HTML标签：对指定的 HTML 标签进行重新定义。</li>
+				<li>使用CSS选择器：对链接的格式进行重新定义。</li></ul></li>
+			<li>样式存放位置：存放在样式表文件中或仅对本文档。</li>
+			<li>在样式对话框中打开类型、背景、区块、边框、扩展等面板进行设置。</li></ol></td></tr>
+	<tr class="second"><td>应用css样式</td>
+		<td><ol><li>选择要应用样式的对象→在属性面板中选择要应用的样式</li>
+			<li>选择要取消样式的对象→在属性面板中从“样式菜单中选择“无”。</li></ol></td></tr>
+		<tr class ="second"><td>修改CSS样式</td><td iclass="ninth">打开CSS样式面板→选择要编辑的样式→单击 CSS 面板底部的“编辑样式””按钮→按需要修改样式。更改将立即应用于当前文档及其它链接到该样式表的文档。</td></tr>
+		<tr class="second"><td>链接外部样式表</td><td class="ninth">可以给文档链接一个CSS外部样式表来应用样式。当对一个 CSS 样式表进行了编辑后，所有链接到该 CSS 样式表的文档都会自动更新。</td></tr></table>
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>数组</title>
+	<script type="text/javascript">
+	function show_confirm(){
+	var tf=confirm("你喜欢我吗?");
+		var h=1;
+		if(tf==true){while(h!=0)
+		{alert("我就知道你喜欢我");
+					alert("你喜欢我怎么不说呀");
+					alert("你不说我怎么知道你喜欢我");}}
+		else{alert("你不喜欢我你今天这个告警框是关不掉的");
+			alert("再重新给你一次机会");
+			show_confirm();}
+	}
+	</script>
+</head>
+
+<body>
+	
+	<script>
+	show_confirm();</script>
+	
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>富文本编辑</title>
+	<style type="text/css">
+		.editable{
+			width:400px;height:400px;
+			border-style: solid;
+		}
+		</style>
+</head>
+
+<body>
+	<iframe name="richedit" style="height:100px;width:100px" src="blank.htm">
+	</iframe>
+	<div class="editable" id="richedit" contenteditable></div>
+	<script type="text/javascript">
+	EventUtil.addHandler(window,"load",function(){
+		frames["richedit"].document.designMode="on";
+	});
+		var div=document.getElementById("richedit");
+		div.contentEditable="true";
+	</script>
+</body>
+</html>

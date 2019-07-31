@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>时间</title>
+</head>
+
+<body>
+	<h1 id="one" style="color:gold "></h1>
+	<script type="text/javascript">
+	var timestamp=(new Date("2018/06/22  08:00:20")).getTime()/1000;
+	
+		function  sx(){
+		var today=parseInt(new Date().getTime()/1000);
+			var jg=today-timestamp;
+			var d=parseInt(jg/86400);
+			var h=parseInt(parseInt(jg%86400)/3600);
+			var m=parseInt(parseInt(parseInt(jg%86400)%3600)/60);
+			var s=jg-d*86400-h*3600-m*60;
+			document.getElementById("one").innerHTML="从我们相识的那天距现在"+d+"天"+h+"小时"+m+"分钟"+s+"秒";
+			
+		}
+		setInterval(function(){
+			sx();
+		},1000);
+		
+	
+	</script>
+</body>
+</html>

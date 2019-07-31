@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sy1</title>
+	<style type="text/css">
+		.map{width:200px;height:400px;background:url("../屏幕快照 2019-04-11 15.23.02.png");position:relative;background-size: cover;}
+		.map1{width:200px;height:400px;background-color:rgba(0,0,0,0.2); position:absolute;color:white;text-align: center;line-height: 20;font-size:20px}
+	</style>
+</head>
+
+<body>
+	<div class="map">
+		<div class="map1" onMouseOver="ys()">这是个帅哥</div>
+	</div>
+	<script type="text/javascript">
+	function ys(){
+		var one=document.createElement("div");
+		one.style.width="200px";
+		one.style.height="400px";
+		one.style.backgroundColor="rgba(1,157,157,0.37)";
+		one.style.color="white";
+		one.style.textAlign="center";
+		one.style.lineHeight="20";
+		one.style.fontSize="20px";
+		one.style.position="absolute";
+		document.getElementsByClassName("map")[0].replaceChild(one,document.getElementsByClassName("map1")[0]);
+		var textnode=document.createTextNode("就是这么的帅");
+		one.appendChild(textnode);
+	}
+	</script>
+</body>
+</html>

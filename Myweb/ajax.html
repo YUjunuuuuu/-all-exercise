@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ajax应用</title>
+    <!-- <link href="" type="text/css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <!-- <div style="width:200px;height:200px;background-color:red">
+        readyState:<span id="A4"></span>
+        <br/> status:
+        <span id="A1"></span>
+        <br/> statusText:
+        <span id="A2"></span>
+        <br/> responseText:
+        <span id="A3"></span>
+        <button onclick="change('1.txt')">change</button>
+    </div>
+    <script type="text/javascript">
+        function change(url) {
+            xmlhttp = new XMLHttpRequest();
+            //get---请求方式
+            xmlhttp.open('get', url, true);
+            xmlhttp.send();
+            xmlhttp.onreadystatechange = state_change;
+        }
+
+        function state_change() {
+            //客户端未初始化0
+            //与服务器建立连接，状态值为1
+            //服务器接受请求，状态值为2
+            //服务器处理中，状态值为3
+            //处理完成 返回结果，状态值为4
+            //200-300之间的（请求成功）
+            //300-400之间的（重定向）
+            //400-500之间的（请求错误！404未找到）
+            //500-600之间的（服务器错误！数据库出问题！联系开发者）
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById('A4').innerHTML = xmlhttp.readyState;
+                document.getElementById('A1').innerHTML = xmlhttp.status;
+                document.getElementById('A2').innerHTML = xmlhttp.statusText;
+                document.getElementById('A3').innerHTML = xmlhttp.responseText;
+            }
+
+        } -->
+    <!-- </script> -->
+    <script type="text/javascript">
+        // var xhr = new XMLHttpRequest();
+        // xhr.onreadystatechange = function() {
+        //     if (xhr.readyState == 4) {
+        //         if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+        //             alert(xhr.responseText);
+        //         } else {
+        //             alert("Request was unsuccessful:" + xhr.status);
+        //         }
+        //     }
+        // };
+        // xhr.open("get", "ajax.php", true);
+        // xhr.setRequestHeader("MyHeader", "MyValue");
+        // xhr.send(null);
+        function submitData() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4) {
+                    if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+                        alert(xhr.responseText);
+                    } else {
+                        alert("Request was unsuccessful:" + xhr.status);
+                    }
+                }
+            }
+        };
+        xhr.open("post", "ajax.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        var form = document.getElementById("user-info");
+        xhr.send(serialize(form));
+
+        function serialize(form) {
+            var parts = [];
+            field = null,
+                i, len, j, optLen, option, optValue;
+            for (i = 0, len = form.elements.length; i < len; i++) {
+                field = form.elements[i];
+                switch (field.type) {
+                    case "select-one":
+                    case "select-multiple":
+                        if (field.name.length) {
+                            for (j = 0, optLen = field.options.length; j < optLen; j++) {
+                                option = field.options[j];
+                                if (option.selected) {
+                                    optValue = "";
+                                    if (option.hasAttribute) {
+                                        optValue = (option.hasAttribute("value") ? option.value : option.text);
+                                    } else {
+                                        optValue = (option.attributes["value"].specified ? option.value : option.text);
+
+                                    }
+                                    parts.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(optValue));
+                                }
+                            }
+                        }
+                        break;
+                    case undefined:
+                    case "file":
+                    case "submit":
+                    case "reset":
+                    case "button":
+                        break;
+                    case "radio":
+                    case "checkbox":
+                        if (!field.checked) {
+                            break;
+                        }
+                    default:
+                        if (field.name.length) {
+                            parts.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value));
+                        }
+                }
+            }
+            return parts.join("&");
+        }
+    </script>
+</body>
+
+</html>

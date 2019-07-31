@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>sy1</title>
+    <style type="text/css">
+        .map {
+            width: 200px;
+            height: 400px;
+            background-image: url("屏幕快照 2019-04-11 15.23.02.png");
+            position: relative;
+            background-size: cover;
+        }
+        
+        .map1 {
+            width: 200px;
+            height: 400px;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            color: white;
+            text-align: center;
+            line-height: 20;
+            font-size: 20px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map" onMouseOver="ys()" onMouseout="ys1()">
+        <div class="map1">这是个帅哥</div>
+    </div>
+    <script type="text/javascript">
+        function ys() {
+            var one = document.createElement("div");
+            one.style.width = "200px";
+            one.style.height = "400px";
+            var to = 400;
+            one.style.backgroundColor = "rgba(1,157,157,0.37)";
+            one.style.color = "white";
+            one.style.textAlign = "center";
+            one.style.lineHeight = "20";
+            one.style.fontSize = "20px";
+            one.style.position = "absolute";
+            one.className = "first";
+            var intervalId = setInterval(function() {
+                to = to - 100;
+                one.style.top = to + "px";
+                if (to == 0)
+                    clearInterval(intervalId);
+            }, 20);
+            document.getElementsByClassName("map1")[0].parentNode.removeChild(document.getElementsByClassName("map1")[0]);
+            document.getElementsByClassName("map")[0].appendChild(one);
+            var textnode = document.createTextNode("就是这么的帅");
+            one.appendChild(textnode);
+            var btn1 = document.createElement("div");
+            var btn2 = document.createElement("div");
+            btn1.style.width = "30px";
+            btn1.style.height = "20px";
+            btn1.backgroundColor = "rgba(1,157,157,0.37)";
+            btn1.style.border = "2px white solid";
+            btn1.style.marginTop = "-160px";
+            btn1.style.marginLeft = "60px";
+            btn1.className = "second";
+            btn2.style.width = "30px";
+            btn2.style.height = "20px";
+            btn2.backgroundColor = "rgba(1,157,157,0.37)";
+            btn2.style.border = "2px white solid";
+            btn2.style.marginTop = "-24px";
+            btn2.style.marginLeft = "110px";
+            btn2.className = "third";
+            one.appendChild(btn1);
+            one.appendChild(btn2);
+            btn1.onmouseover = function() {
+                btn1.style.backgroundColor = "white";
+                btn1.innerHTML = "按钮1";
+                btn1.style.color = "black";
+            }
+            btn2.onmouseover = function() {
+                btn2.style.backgroundColor = "white";
+                btn2.innerHTML = "按钮2";
+                btn2.style.color = "black";
+            }
+            btn1.onmouseout = function() {
+                btn1.backgroundColor = "rgba(1,157,157,0.37)";
+            }
+            btn2.onmouseout = function() {
+                btn2.backgroundColor = "rgba(1,157,157,0.37)";
+            }
+
+
+        }
+
+        function ys1() {
+            var two = document.getElementsByClassName("first")[0];
+            var three = document.createElement("div");
+            three.style.width = "200px";
+            three.style.height = "400px";
+            three.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+            three.style.position = "absolute";
+            three.style.color = "white";
+            three.style.textAlign = "center";
+            three.style.lineHeight = "20";
+            three.style.fontSize = "20px";
+            three.innerHTML = "这是一个帅哥";
+            three.className = "map1";
+            document.getElementsByClassName("map")[0].replaceChild(three, two);
+        }
+    </script>
+</body>
+
+</html>

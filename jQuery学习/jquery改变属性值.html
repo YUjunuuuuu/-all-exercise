@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>改变属性值</title>
+</head>
+
+<body>
+    <input id="one" type="text" value="实验">
+    <button>修改属性的值</button>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            $("button").click(function() {
+                $("#one").attr({
+                    "type": "checkbox",
+                    "value": "haha"
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>第一个java</title>
+	<style type="text/css">
+		#div{width:100px;height:100px;background-color: aqua;}
+		#div1{width:200px;height:200px;background-color: aqua}</style>
+</head>
+
+<body onLoad="startTime()">
+	<div id="div" onMouseOut="onover(this)" onMouseOver="onout(this)"></div>
+	<script>
+	function onover(ooj){
+	ooj.innerHTML="world";}
+	function onout(ooj){
+	ooj.innerHTML="hello";}</script>
+	<form>
+	<input type="text" onChange="alert('hello,有内容？？')">
+	<input type="text" onSelect="changedemo(this)"onFocus="changedemo2(this)" onBlur="changedemo3(this)" ></form>
+	<script>
+	function changedemo(bg){
+	bg.style.background="red";
+	}
+	function changedemo2(bg){
+	bg.style.background="blue";
+	}
+	function changedemo3(bg){
+	bg.style.background="black";
+		}
+	</script>
+	<img src="屏幕快照 2018-11-19 03.19.27.png" id="wid">
+	<form>
+	<input type="button" value="改变" onClick="demo9(this)"></form>
+	<script>
+	function demo(){
+	var hj=document.getElementById("wid").src="https://goss.veer.com/creative/vcg/veer/800water/veer-132284068.jpg"}</script>
+	<!--<div id="div1">俞军喜欢李斯</div>
+	<script>
+	function demo9(){
+	var h=document.getElementById("div1").innerHTML="李斯爱俞军"
+	var g=document.getElementById("div1").style.color="white"}</script>
+	<p id="j1">俞军喜欢李斯</p>
+	<button id="jj1">按钮</button>
+	<script>
+	function bg1(){
+	var y=document.getElementById("j1").innerHTML="李斯喜欢俞军"}
+	function bg2(){
+	var z=document.getElementById("j1").innerHTML="俞军还是喜欢李斯"}
+	var g=document.getElementById("jj1");
+	g.addEventListener("click",bg1);
+	g.addEventListener("click",bg2);</script>
+	<form>
+	<input type="button" id="jay" value="按钮"></form>
+	<script>
+		
+	document.getElementById("jay").addEventListener("click",showType);
+	function showType(){
+	alert("罗硬件是傻叉");}
+</script>
+	<form>
+	<input type="button" value="奇迹即将发生" id="pig">
+	</form>
+	<script>
+		
+			document.getElementById("pig").addEventListener("click",two);
+		document.getElementById("pig").addEventListener("click",one);
+			function two(){
+			alert("罗硬件是傻逼");}
+		function one(){
+			alert("罗硬件还是傻逼");
+		}
+		
+			
+		
+		
+	</script>
+	<div id="bj"><form>
+		<input type="button" id="haha" value="another"></form></div>
+	<script>
+	document.getElementById("haha").addEventListener("click",yj);
+		document.getElementById("bj").addEventListener("click",jy);
+	function yj(event){
+		alert(event.type);
+		alert(event.target);
+		event.stopPropagation();//阻止时间冒泡
+	}
+		function jy(){
+			alert("罗硬件是傻逼");
+		}
+	</script>
+	<script>
+	var str="罗|硬|件|是|傻|逼";
+	document.write("字符串长度为:"+str.length);
+		document.write(str.indexOf("件"));
+		document.write(str.match("不是傻逼"));
+		document.write(str.replace("是傻逼","还是傻逼"));
+		var s=str.split("|")
+		for(var i=0;i<6;i++)
+			{
+				document.write(s[i]);
+			}
+		document.write(str.prototype);
+	</script>
+	<p id="demo7">点击按钮创建一个数组，并显示它的构造函数</p>
+	<button onClick="myFunction()">点我</button>
+	<script>
+	function myFunction(){
+	var fruits="罗硬件";
+	var a="赵子豪";
+		var b="俞军";
+		var c="谷一名";
+		var d="李元东";
+var n=fruits.concat(a,b,c,d);
+		alert(n);
+}</script>
+	<script>
+	var date=new Date();
+	document.write(date);</script>
+	<div id="ddd"></div>
+	<script>
+	function startTime(){
+	var today=new Date();
+	var h=today.getHours();
+	var m=today.getMinutes();
+	var s=today.getSeconds();
+		m=checkTime(m);
+		s=checkTime(s);
+		document.getElementById("ddd").innerHTML=h+":"+m+":"+s;
+		t=setTimeout(function(){
+			startTime();
+		},500);
+	}
+		function checkTime(i){
+			if(i<10){
+				i="0"+i;
+			}
+			return i;
+		}-->
+	</script>
+	<script>
+	var str="Hello World";
+	var str1="hello,jike,xueyuan";
+	document.write("字符串长度:"+str.length);
+	document.write(str.indexof("Hello"));
+	</script>
+	
+	</body>
+</html>

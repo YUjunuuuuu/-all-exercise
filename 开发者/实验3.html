@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>实验15</title>
+	<style type="text/css">
+		fieldset{width:200px;background-color:chartreuse;height:100px;}
+	</style>
+	
+	<script type="text/javascript">
+	function $(id){
+		return document.getElementById(id);
+	}
+		function ycheck(){
+		var username=$("h1").value;
+		var pwd=$("h2").value;
+			alert(username);
+			alert(pwd);
+		var checkright=true;
+			if(username==""||pwd=="")
+				{
+					alert("你的用户名为空");
+					checkright=false;
+				}
+			else 
+				if(username.length<8||username.length>20)
+				
+				{alert("用户名必须大于等于8个字符，小于等于20个字符!");
+					checkright=false;
+				}
+			else if(pwd.length<8||username.length>20)
+				{
+					alert("密码必须大于等于8个字符，小于等于20个字符!");
+					checkright=false;
+				}
+			else()
+			{
+				alert("提交成功");
+			    checkright=true;
+			}
+			
+			return checkright;
+		}
+		
+		function clear()
+		{
+			alert("重置成功!");
+		}
+	</script>
+	
+	<script>
+		function $(id){
+		return document.getElementById(id);
+	}
+			function fun(){
+				var username=$("h1").value;
+				var pwd=$("h2").value;
+				var flag=true;
+				if(username==""||pwd=="")
+				{
+					alert("你的用户名为空");
+					flag=false;
+				}
+				else 
+				if(username.length<8||username.length>20)
+				
+				{alert("用户名必须大于等于8个字符，小于等于20个字符!");
+					flag=false;
+				}
+			else if(pwd.length<8||username.length>20)
+				{
+					alert("密码必须大于等于8个字符，小于等于20个字符!");
+					flag=false;
+				}
+			else
+			{
+				alert("提交成功");
+			    flag=true;
+			}
+			
+			return flag;
+				
+			}
+		function yclear()
+		{
+			alert("重置成功!");
+		}
+	</script>
+</head>
+
+<body>
+	<form onSubmit="return fun()" action="数组.html" onReset="yclear()">
+		<fieldset>
+	<legend>用户登录</legend>
+		用户名<input type="text" name="mytext" id="h1"><br>
+		密&nbsp;&nbsp;&nbsp;&nbsp;码<input type="password" name="mypassword" id="h2"><br>
+		<input type="submit" value="提交">
+		<input type="reset" value="重置">
+		</fieldset>
+	</form>
+	<!--<form action="数组.html" method="get" onSubmit="check()" onReset="clear()">
+	<fieldset>
+	<legend>用户登录</legend>
+		用户名<input type="text" name="mytext" id="h1"><br>
+		密&nbsp;&nbsp;&nbsp;&nbsp;码<input type="password" name="mypassword" id="h2"><br>
+		<input type="submit" value="提交" onClick="check()">
+		<input type="reset" value="重置">
+		</fieldset>
+	</form> -->
+</body>
+</html>

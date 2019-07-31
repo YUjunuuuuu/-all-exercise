@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>显示列表项的内容</title>
+	<script type="text/javascript">
+	function disaplayItem(){
+		var x=document.getElementById("select").selectedIndex;
+		var y=document.getElementsByTagName("option");
+		alert( "教材名称："+y[x].text+"\r定价："+y[x].value);
+	}
+	</script>
+</head>
+
+<body>
+	<h3>显示列表项的内容</h3>
+	<select id="select" name="xuanzhe" size="5" style="overflow-y: hidden" >
+	    <option value="35元" selected onClick="disaplayItem()">计算机组成原理</option>
+		<option value="38元" onClick="disaplayItem()">数据结构</option>
+		<option value="43元" onClick="disaplayItem()">计算机网络</option>
+		<option value="40元" onClick="disaplayItem()">Java程序设计</option>
+		<option value="28元" onClick="disaplayItem()">算法分析</option>
+	
+	</select>
+</body>
+</html>

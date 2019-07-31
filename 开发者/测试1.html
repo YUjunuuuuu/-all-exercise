@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试</title>
+	
+</head>
+
+<body>
+	<script type="text/javascript">
+		function Person(name,age,job){
+			this.name=name;
+			this,age=age;
+			this.job=job;
+			this.sayName=sayName;
+		}
+		function sayName(){
+			alert(this.name);
+		}
+		var person1=new Person("Nicholas",29,"Software Engineer");
+		var person2=new Person("Greg",27,"Doctor");
+		alert(person1.sayName());
+		var o=new Object();
+		Person.call(o,"Kristen",25,"Nurse");
+		alert(o.sayName());
+		
+</script>
+</body>
+</html>

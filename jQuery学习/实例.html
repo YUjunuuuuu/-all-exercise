@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jquery选择器的用法</title>
+    <style type="text/css">
+        #one {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            float: left;
+        }
+        
+        #two {
+            width: 50px;
+            height: 50px;
+            background-color: burlywood;
+        }
+        
+        #three {
+            width: 50px;
+            height: 50px;
+            background-color: burlywood;
+        }
+        
+        .four {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            float: left;
+            margin-left: 5px;
+        }
+        
+        .five {
+            width: 50px;
+            height: 50px;
+            background-color: burlywood;
+        }
+        
+        .six {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            float: left;
+            margin-left: 5px;
+        }
+        
+        .seven {
+            width: 50px;
+            height: 50px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" id="b1" value="想要实现的">
+    <div id="one">
+        <h2>1</h2>
+        <div id="two">
+            <h4>2</h4>
+        </div>
+        <div id="three">
+            <h3>3</h3>
+        </div>
+    </div>
+    <div class="four">
+        <div class="five"></div>
+    </div>
+    <div class="six">
+        <div class="seven"></div>
+    </div>
+    <input type="text" disabled="disabled" value="1">
+    <input type="text" disabled="disabled" value="2">
+    <input type="text" value="3">
+    <input type="text" value="4">
+    <input type="checkbox" value="跑步">跑步
+    <input type="checkbox" value="游泳">游泳
+    <input type="checkbox" value="踩单车">踩单车
+    <input type="checkbox" value="遛狗">遛狗
+    <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+
+
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#b1").click(function() {
+                alert($("selected>option: selected").length);
+            })
+        })
+    </script>
+</body>
+
+</html>

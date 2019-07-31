@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>formdata</title>
+</head>
+
+<body>
+    <form id="user-info">
+        用户名:<input type="text"> 密码:
+        <input type="password">
+
+    </form>
+
+</body>
+<script type="text/javascript">
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'postexample.php', true);
+    var form = document.getElementById("user-info");
+    xhr.send(new FormData(form));
+    xhr.onreadystatechange = function() {
+        if (this.readyState !== 4)
+            return
+        console.log(this.responseText)
+    }
+</script>
+
+</html>

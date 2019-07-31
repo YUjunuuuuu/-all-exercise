@@ -1,0 +1,61 @@
+
+#slider {
+    background: url("../../img/lb/loading.gif") no-repeat scroll 50% 50% rgba(0, 0, 0, 0);
+    height: 246px;
+    position: relative;
+    width: 618px;
+}
+#slider img {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+#slider a {
+    border: 0 none;
+    display: block;
+}
+.nivo-controlNav {
+    position: absolute;
+    right: 20px;
+    top: 350px;
+}
+.nivo-controlNav a {
+    background: url("../../img/lb/bullets.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    display: block;
+    float: left;
+    height: 22px;
+    margin-right: 3px;
+    text-indent: -9999px;
+    width: 22px;
+}
+.nivo-controlNav a.active {
+    background-position: 0 -22px;
+}
+.nivo-directionNav a {
+    background: url("../../img/lb/arrows.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    display: block;
+    height: 30px;
+    text-indent: -9999px;
+    width: 30px;
+}
+a.nivo-nextNav {
+    background-position: -30px 0;
+    right: 15px;
+}
+a.nivo-prevNav {
+    left: 15px;
+}
+.nivo-caption {
+    font-family: Helvetica,Arial,sans-serif;
+    text-shadow: none;
+}
+.nivo-caption a {
+    color: #efe9d1;
+    text-decoration: underline;
+}
+.clear {
+    clear: both;
+}

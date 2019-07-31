@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>进度条显示</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <div id="music"></div>
+    <button id="btn">btn</button>
+    <script>
+        btn.onclick = function() {
+                var xhr = new xmlHttpRequest();
+                var result = document.getElementById("result");
+                xhr.onprogress = function(e) {
+                    if (e.lengthComputable) {
+                        result.innerHTML = e.loaded + 'bytes / ' + e.total + 'bytes';
+                    }
+                }
+                xhr.onload = function(e) {
+                        var data = xhr.response;
+                        if (xhr.status == 200) {
+                            var audio = document.createElement('audio');
+                            audio.onload = function() {
+                                URL.revokeObjectURL(audio.src);
+                            }
+                            audio.src = URL.createObjectURL(data);
+                            audio.setAttribute('controls', '');
+                            if (!music.innerHTML) {
+                                music.appendChild(audio);
+                            }
+                        }
+                    } <
+                    /body> <
+                    /html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        body {
+            margin: 50px 0 0 0;
+            padding: 0;
+            text-align: center;
+        }
+        /* .tp {
+            width: 15%;
+        } */
+        
+        .demo img {
+            width: 200px;
+            /* height: 15%; */
+        }
+        /* .demo :hover{
+            animation-name:slideInDown;
+        }
+        .h111 :hover{
+            animation-name: slideInDown;
+        }   */
+        
+        .fh2 {
+            font-size: 3em;
+            top: 180px;
+            position: relative;
+            opacity: 0;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            var tp = document.getElementById("tp1");
+            var h = 200;
+            var op = document.getElementById("opaa");
+            var opa = 0;
+            tp.onmouseover = function() {
+
+                // alert("test");
+
+                // setTimeout(function(){
+                //     tp1.className = '';
+                // },2000);
+                // tp1.style.width = 1000 + "px";
+
+
+                function widp() {
+                    tp.setAttribute("className", "animated slideOutDown");
+                    h = h + 5;
+                    tp.style.width = h + "px";
+
+                    if (h == 400) {
+                        clearInterval(aaa);
+                    }
+                }
+                var aaa = setInterval(widp, 10);
+                // opaa.style.opacity = 1;
+
+
+
+
+                function op1() {
+                    opa = opa + 0.1;
+                    opaa.style.opacity = opa;
+                    if (opa == 1) {
+                        clearInterval(ccc);
+
+                    }
+
+
+                }
+                var ccc = setInterval(op1, 10);
+            }
+            tp.onmouseout = function() {
+
+                function fun2() {
+                    h = 400;
+
+
+                    function widr() {
+                        // tp1.className = 'animated alideOutUp'
+                        h = h - 5;
+                        tp1.style.width = h + "px";
+                        if (h == 200) {
+                            clearInterval(bbb);
+                        }
+
+                    }
+                    var bbb = setInterval(widr, 10);
+                }
+            }
+        })
+    </script>
+
+</head>
+
+<body>
+    <div class="demo">
+        <img class="" id="tp1" src="头像.jpg" onmouseover="fun1()" onmouseout="fun2()">
+        <h2 class="fh2" id="opaa">Hello</h2>
+    </div>
+
+</body>
+
+</html>

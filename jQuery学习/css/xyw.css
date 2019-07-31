@@ -1,0 +1,335 @@
+        img {
+            height: 100%;
+        }
+        
+        .sj1 {
+            height: 20px;
+        }
+        
+        .rq {
+            margin-left: 140px;
+        }
+        
+        .ele {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .zxdt {
+            list-style-type: none;
+            padding: 0px;
+        }
+        
+        .h {
+            padding: 0px;
+        }
+        
+        .dh5 {
+            background-color: darksalmon;
+            color: brown;
+            height: 40px;
+        }
+        
+        .dh6 {
+            text-align: center;
+            padding: 0px;
+            margin-top: 9px;
+        }
+        
+        .dh8 {
+            margin-left: 44px;
+        }
+        
+        .lb {
+            padding: 0px;
+        }
+        
+        .fw {
+            height: 40px;
+            background-color: darkseagreen;
+            color: brown;
+            margin-top: 10px;
+            box-shadow: 2px 2px 5px #333333;
+        }
+        
+        .dt {
+            height: 40px;
+            color: brown;
+            margin-top: 10px;
+            box-shadow: 2px 2px 5px #333333;
+        }
+        
+        .fw1 {
+            height: 220px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: chartreuse;
+            margin-top: 10px;
+        }
+        
+        .dt1 {
+            height: 220px;
+            border-style: solid;
+            border-width: 1px;
+            background-color: burlywood;
+            margin-top: 15px;
+        }
+        
+        .fw2 {
+            width: 120px;
+            height: 30px;
+            text-align: center;
+        }
+        
+        .xs {
+            border-right-style: dashed;
+            border-width: 1px;
+        }
+        
+        .fw3 {
+            margin-top: 13px;
+        }
+        
+        .dt3 {
+            margin-top: 13px;
+            float: left;
+        }
+        
+        .dt4 {
+            margin-top: 13px;
+            float: left;
+            margin-left: 140px;
+        }
+        
+        ;
+        .dh {
+            height: 150px;
+        }
+        
+        .dh1 {
+            height: 40px;
+            background-color: chartreuse;
+            color: brown;
+            margin-top: 20px;
+            box-shadow: 3px 3px 10px #333333;
+        }
+        
+        .dh2 {
+            height: 20px;
+            width: 120px;
+            text-align: center;
+        }
+        
+        .dh3 {
+            height: 100px;
+            margin-top: 10px;
+            box-shadow: 1px 1px 2px #333333;
+        }
+        
+        .dh4 {
+            margin-top: 20px;
+        }
+        
+        .wd {
+            height: 150px
+        }
+        
+        .wd1 {
+            height: 40px;
+            color: blue;
+            margin-top: 20px;
+            box-shadow: 1px 1px 2px #333333;
+        }
+        
+        .wd2 {
+            height: 100px;
+            border-style: solid;
+            border-width: 1px;
+            margin-top: 10px
+        }
+        
+        .wd3 {
+            margin-left: 10px;
+            height: 140px;
+            border-style: solid;
+            border-width: 1px;
+            margin-top: 40px;
+            width: 140px;
+        }
+        
+        .wd4 {
+            margin-top: 10px;
+        }
+        
+        .yq {
+            height: 30px;
+            color: blue;
+            text-align: center;
+            box-shadow: 1px 1px 2px #333333;
+            width: 100px;
+            border-radius: 5px;
+        }
+        
+        .yq1 {
+            margin-top: 5px;
+        }
+        
+        .op {
+            margin-top: 15px;
+        }
+        
+        .zd {
+            height: 20px;
+            padding-left: 50px;
+        }
+        
+        .foot {
+            height: 50px;
+            background-color: black;
+            margin-top: 20px;
+        }
+        
+        .foot1 {
+            height: 15px;
+            color: aliceblue;
+            text-align: center;
+        }
+        
+        a {
+            text-decoration: none;
+            color: crimson;
+        }
+        
+        a:hover {
+            text-decoration: none
+        }
+        
+        .ss {
+            border-right-style: solid;
+            border-width: 1px;
+        }
+        
+        .ss a {
+            color: black;
+        }
+        
+        .ss a:hover {
+            color: crimson;
+        }
+        
+        .yy {
+            box-shadow: 3px 3px 10px #333333;
+            border-radius: 6px;
+            width: 100px;
+            margin-left: 10px;
+            height: 27px;
+        }
+        
+        .yd {
+            margin-left: 17px;
+        }
+        
+        .yd1 {
+            margin-left: 21px;
+        }
+        
+        .yd2 {
+            margin-left: 23px;
+        }
+        
+        .yd3 {
+            margin-top: 5px;
+        }
+        
+        .yd4 {
+            margin-top: 10px;
+        }
+        
+        .dh7 {
+            margin-top: 13px;
+        }
+        
+        .dl {
+            height: 100px;
+        }
+        
+        .dl1 {
+            height: 40px;
+            padding: 0px;
+            margin-top: 20px;
+        }
+        
+        .dl2 {
+            text-align: center;
+            padding: 0px;
+        }
+        
+        .dl4 {
+            text-align: center;
+            margin-top: 34px;
+            padding: 0px;
+        }
+        
+        .dl5 {
+            margin-top: 10px;
+            padding: 0px;
+        }
+        
+        .dl6 {
+            padding: 0px;
+            margin-top: 0px;
+        }
+        
+        .one1,
+        .two1,
+        .two2,
+        .two3,
+        .two4,
+        .three1,
+        .four1,
+        .five1,
+        .six1 {
+            padding: 5px;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+        
+        .two1,
+        .two2,
+        .two3,
+        .two4,
+        .three1,
+        .four1,
+        .five1,
+        .six1 {
+            display: none;
+        }
+        
+        @media only screen and (max-width: 800px) {
+            .dt {
+                margin-top: -13px;
+            }
+            .one4 {
+                margin-top: 5px;
+            }
+            .one5 {
+                margin-top: 5px;
+            }
+            .one6 {
+                margin-top: -15px;
+            }
+            .wd3 {
+                margin-left: 100px;
+                margin-top: -10px;
+            }
+            .zd {
+                margin-top: 15px;
+                margin-left: 47px;
+            }
+            .foot {
+                font-size: 9px;
+            }
+            .dt4 {
+                margin-left: 60px;
+            }
+        }
